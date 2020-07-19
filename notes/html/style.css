@@ -1,0 +1,36 @@
+#table-of-contents {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2em 0 2em 2em;
+    width: 380px;
+    height: 100vh;
+    font-size: 13px;
+    background: #F2F2F2;
+    overflow: auto;
+}
+
+#table-of-contents ul {
+    list-style: none;
+    padding-left: 0;
+    font-weight: normal;
+}
+
+body,
+/*div.outline-2, */
+#footnotes {
+    margin-left: 400px;
+    max-width: 90ch;
+}
+
+#list-of-tables h2 {
+    font-size: 1rem;
+}
+
+#text-list-of-tables {
+    color: #7A7494;
+}
+
+#text-list-of-tables span{
+    color: navy;
+}

@@ -1,0 +1,6 @@
+[submodule "notes/html/theme"]
+	path = notes/html/theme
+	url = git@github.com:vincentdoerig/latex-css.git
+[submodule "examples"]
+	path = examples
+	url = git@github.com:DataMascara/cisc3140.git

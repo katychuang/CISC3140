@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-07-19 Sun 13:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CISC 3140</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Katherine Chuang" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="theme/style.min.css"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">CISC 3140
+<br />
+<span class="subtitle">Design and Implementation of Software Applications 2 Department of Computer &amp; Information Science, Brooklyn College</span>
+</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org556cd4b">Introduction to Summer course</a></li>
+<li><a href="#logistics">Logistics</a>
+<ul>
+<li><a href="#orgdb849b9">Course schedules</a>
+<ul>
+<li><a href="#org0f73bc9">Weekly Outcomes</a></li>
+<li><a href="#org6bdee82">Design of Homework Activities</a></li>
+</ul>
+</li>
+<li><a href="#orgf91ffc8">Grades and Points allocation</a>
+<ul>
+<li><a href="#org20bdf96">Required activities</a></li>
+<li><a href="#org34d942e">Extra Credit activities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc61ced4">Learning Modules</a>
+<ul>
+<li><a href="#m1">Module 1 Introduction to Software Teams</a>
+<ul>
+<li><a href="#orga64d1a0">Topic 1: What is Software</a></li>
+<li><a href="#orgac128cf">Topic 2: Engineering Discipline</a></li>
+<li><a href="#org8a465f2">Topic 3: Software Teams (Structures)</a></li>
+</ul>
+</li>
+<li><a href="#m2">Module 2 Managing Software Projects</a>
+<ul>
+<li><a href="#orgc41c894">Topic 4: Process</a></li>
+<li><a href="#org74fa22d">Topic 5: Project Estimations</a></li>
+<li><a href="#org8476627">Topic 6: Terminal</a></li>
+<li><a href="#orgb544612">Topic 7: Configuration Management</a></li>
+<li><a href="#org849f410">Topic 8: VCS and Release Management</a></li>
+</ul>
+</li>
+<li><a href="#m3">Module 3 Importance of Specifications</a>
+<ul>
+<li><a href="#org135af92">Topic 9: Specifications and other technical documents</a></li>
+<li><a href="#org8a0f29f">Topic 10: Programming paradigms are different ways to express problems in code</a></li>
+<li><a href="#org21aae83">Topic 11: Functional &amp; declarative way with Scheme</a></li>
+<li><a href="#org0f3ac4c">Topic 12: Scripting Languages and barebones intro to JavaScript</a></li>
+</ul>
+</li>
+<li><a href="#m4">Module 4 Web Technology &amp; Software Construction</a>
+<ul>
+<li><a href="#orge5f56e9">Topic 13: Specifications and other technical documents</a></li>
+<li><a href="#org7dfc01e">Topic 14: Web Development and HTTP Protocol</a></li>
+<li><a href="#orgf761b7b">Topic 15: Separating Content from Presentation</a></li>
+</ul>
+</li>
+<li><a href="#m5">Module 5 Web design &amp; Software Delivery</a>
+<ul>
+<li><a href="#org99eb97d">Topic 16: HTML continued, maybe intro to Web  Scraping</a></li>
+<li><a href="#orgeed1040">Topic 17: Continuous Integration for Automated Testing</a></li>
+<li><a href="#orgb8466e1">Topic 18: Software Testing and measuring development and other quality metrics</a></li>
+</ul>
+</li>
+<li><a href="#org2fe4db5">Summary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org556cd4b" class="outline-2">
+<h2 id="org556cd4b">Introduction to Summer course</h2>
+<div class="outline-text-2" id="text-org556cd4b">
+<p>
+This is the summer version of the course that is condensed to 5 weeks. In the <b>Lecture Notes</b> section below, each module is meant to be covered during 1 week of the course. Within each module are between 3-5 topics, each with a set of <i>Learning Objectives</i> and <i>Activities</i> outlined.
+</p>
+
+<p>
+The contents of this document is intended to serve both students who are taking the course and the instructor re-teaching the course.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf6479cf" class="outline-2">
+<h2 id="logistics">Logistics</h2>
+<div class="outline-text-2" id="text-logistics">
+<div id="list-of-tables">
+<h2>List of Tables</h2>
+<div id="text-list-of-tables">
+<ul>
+<li><span class="table-number">Table 1:</span> Course Schedule</li>
+<li><span class="table-number">Table 2:</span> Summary of scored activities each week</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdb849b9" class="outline-3">
+<h3 id="orgdb849b9">Course schedules</h3>
+<div class="outline-text-3" id="text-orgdb849b9">
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0f73bc9">Weekly Outcomes</a></li>
+<li><a href="#org6bdee82">Design of Homework Activities</a></li>
+</ul>
+</div>
+
+<p>
+This section describes how the learning modules are structured, correlating to each week.
+</p>
+</div>
+
+<div id="outline-container-org0f73bc9" class="outline-4">
+<h4 id="org0f73bc9">Weekly Outcomes</h4>
+<div class="outline-text-4" id="text-org0f73bc9">
+<p>
+Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
+</p>
+
+<ul class="org-ul">
+<li><b>Open book quiz</b> to ensure students knows where to reference materials for that week (Friday)</li>
+<li><b>Reflective activity</b> based on lecture and reading (Sunday)</li>
+<li><b>Homework assignment</b> related to the module (Tuesday)</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Course Schedule</caption>
+
+<colgroup>
+<col  class="org-center" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-center">Week</th>
+<th scope="col" class="org-left">Module</th>
+<th scope="col" class="org-left">Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-center">1</td>
+<td class="org-left">Module 1 Introduction to Software Teams</td>
+<td class="org-left">Discussion based on reading, Quiz</td>
+</tr>
+
+<tr>
+<td class="org-center">2</td>
+<td class="org-left">Module 2 Managing Software Projects. Building Software as a Team</td>
+<td class="org-left">Collaborative Activity, Quiz</td>
+</tr>
+
+<tr>
+<td class="org-center">3</td>
+<td class="org-left">Module 3 Importance of Specifications</td>
+<td class="org-left">Collaborative Activity, Quiz</td>
+</tr>
+
+<tr>
+<td class="org-center">4</td>
+<td class="org-left">Module 4 Web Technology &amp; Software Construction</td>
+<td class="org-left">Collaborative Activity, Quiz</td>
+</tr>
+
+<tr>
+<td class="org-center">5</td>
+<td class="org-left">Module 5 Web design &amp; Software Delivery</td>
+<td class="org-left">Collaborative Activity, Quiz</td>
+</tr>
+
+<tr>
+<td class="org-center">Final</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Cumulative Exam</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<p>
+<i>Instructor note</i> This weekly "checkpoint" structure seems to work well for the because there are a vast number of "new things" that the students are learning in this course for the first time ever. Weekly checks are constructed to ensure different levels of cognition are utilized with the course material. Due dates are spread over different days to aid in student's time management abilities and also to help with the workflow of grading turnaround time.
+</p>
+</div>
+</div>
+<div id="outline-container-org6bdee82" class="outline-4">
+<h4 id="org6bdee82">Design of Homework Activities</h4>
+<div class="outline-text-4" id="text-org6bdee82">
+<p>
+The first homework assignment focuses on the challenges of communication and more specifically, shared decision making "on the fly" without any communication policies in place. The rest of the homeworks are more technical in nature, meaning the student will have to practice looking for and reading technical documents to complete certain suggested tasks.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf91ffc8" class="outline-3">
+<h3 id="orgf91ffc8">Grades and Points allocation</h3>
+<div class="outline-text-3" id="text-orgf91ffc8">
+</div>
+<div id="outline-container-org20bdf96" class="outline-4">
+<h4 id="org20bdf96">Required activities</h4>
+<div class="outline-text-4" id="text-org20bdf96">
+<p>
+Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
+</p>
+
+<ul class="org-ul">
+<li>Open book quiz to ensure students knows where to reference materials for that week (Friday)</li>
+<li>An activity based on reflecting over the lecture and reading (Sunday)</li>
+<li>Hands on homework assignment related to the module (Tuesday)</li>
+</ul>
+
+<p>
+All items must be completed by their due dates for full points.
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> Summary of scored activities each week</caption>
+
+<colgroup>
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-center">Week</th>
+<th scope="col" class="org-center">Quiz</th>
+<th scope="col" class="org-center">Homework</th>
+<th scope="col" class="org-center">Discussion</th>
+<th scope="col" class="org-right">Accumulating Total Points<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-center">1</td>
+<td class="org-center">8</td>
+<td class="org-center">8</td>
+<td class="org-center">1</td>
+<td class="org-right">17</td>
+</tr>
+
+<tr>
+<td class="org-center">2</td>
+<td class="org-center">8</td>
+<td class="org-center">8</td>
+<td class="org-center">1</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-center">3</td>
+<td class="org-center">8</td>
+<td class="org-center">8</td>
+<td class="org-center">1</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-center">4</td>
+<td class="org-center">8</td>
+<td class="org-center">8</td>
+<td class="org-center">1</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-center">5</td>
+<td class="org-center">8</td>
+<td class="org-center">8</td>
+<td class="org-center">1</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-center">Final Exam</td>
+<td class="org-center">15</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-right">100</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-center">Total</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-right">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org34d942e" class="outline-4">
+<h4 id="org34d942e">Extra Credit activities</h4>
+<div class="outline-text-4" id="text-org34d942e">
+<p>
+The goal of extra credit is to enhance absorption of the course material, by allowing students to summarize their reading or class discussion activity to wiki pages.
+</p>
+
+<p>
+The purpose of the wiki is to potentially serve as a study guide for the final exam at the end of the semester.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc61ced4" class="outline-2">
+<h2 id="orgc61ced4">Learning Modules</h2>
+<div class="outline-text-2" id="text-orgc61ced4">
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#m1">Module 1 Introduction to Software Teams</a></li>
+<li><a href="#m2">Module 2 Managing Software Projects</a></li>
+<li><a href="#m3">Module 3 Importance of Specifications</a></li>
+<li><a href="#m4">Module 4 Web Technology &amp; Software Construction</a></li>
+<li><a href="#m5">Module 5 Web design &amp; Software Delivery</a></li>
+<li><a href="#org2fe4db5">Summary</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2d3462e" class="outline-3">
+<h3 id="m1">Module 1 Introduction to Software Teams</h3>
+<div class="outline-text-3" id="text-m1">
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga64d1a0">Topic 1: What is Software</a></li>
+<li><a href="#orgac128cf">Topic 2: Engineering Discipline</a></li>
+<li><a href="#org8a465f2">Topic 3: Software Teams (Structures)</a></li>
+</ul>
+</div>
+
+
+<p>
+In this first week, we focus on the world of software development as a whole.
+</p>
+
+<p>
+In lecture 1, we start with what is software, what is the purpose of software, and why is software created? By whom? For whom? These are some of the questions to think about why a software project exists, to better understand the overall context.
+</p>
+
+<p>
+Next in lecture 2 we start looking at the role of the software development team and some of the challenges they face in delivering quality. This is to help you start reflecting about what you know relating to software development today.
+</p>
+
+<p>
+In lecture 3 we start looking at the software team, how the structure of team organization relates to collaborating on project(s).
+</p>
+
+<p>
+This week is more focused on communication. There are no programming assignments, but instead there is a group activity where you discuss with your group to try making a group decision.
+</p>
+</div>
+
+<div id="outline-container-orga64d1a0" class="outline-4">
+<h4 id="orga64d1a0">Topic 1: What is Software</h4>
+<div class="outline-text-4" id="text-orga64d1a0">
+</div>
+<ul class="org-ul">
+<li><a id="org072af0f"></a>Learning Objectives<br />
+<div class="outline-text-5" id="text-org072af0f">
+<p>
+This course covers the tools and techniques for large scale software development.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org174b3e4"></a>What is software? What is considered large-scale software?<br /></li>
+
+<li><a id="orga03f1c4"></a>What makes large-scale software more challenging than a mini software project?<br /></li>
+
+<li><a id="orgd527969"></a>What are qualities of a senior software engineer?<br /></li>
+</ul>
+</li>
+
+<li><a id="org0df136e"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="orgebdd23a"></a>Lecture <a href="https://docs.google.com/presentation/d/1iZ4JECgPQwAJDCw3PJkySlBYmSsb0rSM9_kkzrME3d8/edit">What is Software?</a> covers the relationship of software to business goals. Software production (especially the lucrative variety) is often done in order to achieve business aims. There are open source software projects as well that focus on non-capitalistic goals.<br /></li>
+<li><a id="orgd2a7a4a"></a>Read <a href="https://link.springer.com/article/10.1007/s10664-017-9524-2">Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation</a> to understand large-scale software concerns (at minimum, the introduction section)<br /></li>
+<li><a id="org711cf49"></a>Watch <a href="https://www.youtube.com/watch?v=JxkEkWpo6Vw">Difference between Application and System Software</a>. This video describes two common categories of software. In this class we're focusing more on the production of application (end user) software, and using some system software to achieve the end goal.<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-orgac128cf" class="outline-4">
+<h4 id="orgac128cf">Topic 2: Engineering Discipline</h4>
+<div class="outline-text-4" id="text-orgac128cf">
+</div>
+<ul class="org-ul">
+<li><a id="org878bf04"></a>Learning Objectives<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org8a465f2" class="outline-4">
+<h4 id="org8a465f2">Topic 3: Software Teams (Structures)</h4>
+</div>
+</div>
+
+
+<div id="outline-container-org393f6e5" class="outline-3">
+<h3 id="m2">Module 2 Managing Software Projects</h3>
+<div class="outline-text-3" id="text-m2">
+<p>
+This week we dive into building software as a team - the challenges and some of the approaches to manage complexity. and in particular some practices in managing software projects. The topics in this module focuses on the various processes that a team or individuals on a team might use to align themselves to work together (such as techniques to agree on policies or milestones, or more technically like how to share files and developing environments).
+</p>
+
+<p>
+Proposed schedule of completion is as follows, however feel free to read ahead.
+</p>
+
+<ul class="org-ul">
+<li>Before Monday: Lectures 4 &amp; 5</li>
+<li>Before Tuesday: Lecture 6</li>
+<li>Before Wednesday: Lecture 7</li>
+<li>Before Thursday: Lecture 8</li>
+</ul>
+</div>
+
+
+<div id="outline-container-orgc41c894" class="outline-4">
+<h4 id="orgc41c894">Topic 4: Process</h4>
+<div class="outline-text-4" id="text-orgc41c894">
+</div>
+<ul class="org-ul">
+<li><a id="org45b944b"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org6c490a1"></a>Importance of Process in producing consistency and with quality<br /></li>
+
+<li><a id="org5102c53"></a>Where Software Engineering and SDLC come from<br /></li>
+
+<li><a id="org4861636"></a>Software Engineering principles<br /></li>
+</ul>
+</li>
+
+<li><a id="orgb0babf6"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org6270ef4"></a>Lecture: Process in Software Engineering<br /></li>
+<li><a id="orgcb18c5d"></a>Read No Silver Bullets to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.<br /></li>
+<li><a id="org0be8ce6"></a>Read A Brief History of Software Engineering  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?<br /></li>
+<li><a id="org77d0992"></a>Read Chapter 1 of Seriously Good Software (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org74fa22d" class="outline-4">
+<h4 id="org74fa22d">Topic 5: Project Estimations</h4>
+<div class="outline-text-4" id="text-org74fa22d">
+</div>
+<ul class="org-ul">
+<li><a id="orgb8e435f"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org6e5ec42"></a>General purpose of project planning<br /></li>
+
+<li><a id="org74ac6b2"></a>Gathering requirements<br /></li>
+
+<li><a id="org47221a7"></a>Importance of Specifications<br /></li>
+</ul>
+</li>
+
+<li><a id="org1fb2d34"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org2acde46"></a>Lecture: <a href="https://docs.google.com/presentation/d/1SFDq6ux2jE5FUB6d8bTIrEBfssEoqHNQsidlXYo8yRQ/edit?usp=sharing">Project Estimations</a><br /></li>
+
+<li><a id="org1cad637"></a>Read: Software Tools and Techniques Report - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.<br /></li>
+
+<li><a id="org3c303e0"></a>Read: Successful Software Management Style: Steering and Balance - to get a sense of various considerations given to managing projects<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="outline-container-org8476627" class="outline-4">
+<h4 id="org8476627">Topic 6: Terminal</h4>
+<div class="outline-text-4" id="text-org8476627">
+</div>
+<ul class="org-ul">
+<li><a id="org917bc09"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org60a5312"></a>Introduction to the terminal<br /></li>
+
+<li><a id="org21e2b99"></a>Accessing the manual page for a software<br /></li>
+
+<li><a id="orga592dba"></a>Navigating the manual page<br /></li>
+
+<li><a id="org4934ab4"></a>Introduction to SSH<br /></li>
+</ul>
+</li>
+
+<li><a id="orgfb89e70"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org6a174f7"></a>Lecture: <a href="https://docs.google.com/presentation/d/1ZGXvpvWRFXwgvU2iRDcjHbH3WHM8M5LNRc1SAkM3DCs/edit?usp=sharing">Terminal</a><br /></li>
+
+<li><a id="orgd727fa0"></a>For those who are new to the terminal environment and need a little more guidance than the lecture, start with <a href="https://missing.csail.mit.edu/2020/course-shell/">Lecture 1 from Missing Semester of CS</a> to understand what is the shell, and how to navigate it.<br /></li>
+<li><a id="orgfe82fb4"></a><i>Suggested for those who do not have unix/linux access already or are new to installing software by command-line</i>, try accessing BC's Web Lab Linux Server using SSH (link to instructions). The homework assignment will required the command line interface (CLI).<br />
+<div class="outline-text-6" id="text-orgfe82fb4">
+<p>
+Discussion board
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="outline-container-orgb544612" class="outline-4">
+<h4 id="orgb544612">Topic 7: Configuration Management</h4>
+<div class="outline-text-4" id="text-orgb544612">
+</div>
+<ul class="org-ul">
+<li><a id="orgaac489e"></a>Learning Objectives<br /></li>
+
+<li><a id="orga2e3e15"></a>Activities<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org849f410" class="outline-4">
+<h4 id="org849f410">Topic 8: VCS and Release Management</h4>
+<div class="outline-text-4" id="text-org849f410">
+</div>
+<ul class="org-ul">
+<li><a id="orgb03d115"></a>Learning Objectives<br /></li>
+
+<li><a id="orgd2e2927"></a>Activities<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org50c3e0d" class="outline-3">
+<h3 id="m3">Module 3 Importance of Specifications</h3>
+<div class="outline-text-3" id="text-m3">
+<p>
+This module focuses on the different kinds of documents to see how technical information is structured and presented. We'll focus more on a type of document called a specification. Technical writing is an art, it helps to see different examples. From this week until the end you'll be referencing different kinds of documents to get good at picking out key details.
+</p>
+
+<p>
+Alongside this theme we'll also look at different programming paradigms to see how problems can be expressed in different kinds of abstractions.
+</p>
+</div>
+
+<div id="outline-container-org135af92" class="outline-4">
+<h4 id="org135af92">Topic 9: Specifications and other technical documents</h4>
+<div class="outline-text-4" id="text-org135af92">
+</div>
+<ul class="org-ul">
+<li><a id="orgfab5773"></a>Learning Objectives<br /></li>
+
+<li><a id="org71a6c92"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="orgd52dd38"></a>Slides Specifications and other technical documents<br /></li>
+
+<li><a id="org031446e"></a>Read Pages 1-4 of The Algol 60 Report<br /></li>
+
+<li><a id="org586c70d"></a>Discussion Activity<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org8a0f29f" class="outline-4">
+<h4 id="org8a0f29f">Topic 10: Programming paradigms are different ways to express problems in code</h4>
+<div class="outline-text-4" id="text-org8a0f29f">
+<p>
+Programming is about abstraction. There are different kinds of abstractions than Object Oriented programming.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgcd9f0c7"></a>Learning Objectives<br /></li>
+
+<li><a id="orga1d0943"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org03cb116"></a>Lecture: Programming Paradigms, Functional &amp; Declarative Programming<br /></li>
+<li><a id="org68acf91"></a>Read: Programming Paradigms for Dummies: What Every Programmer Should Know<br /></li>
+<li><a id="org1495bcd"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org21aae83" class="outline-4">
+<h4 id="org21aae83">Topic 11: Functional &amp; declarative way with Scheme</h4>
+<div class="outline-text-4" id="text-org21aae83">
+<p>
+Scheme is a programming language with many variations.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org812122f"></a>Learning Objectives<br /></li>
+
+<li><a id="orge37081c"></a>Activities<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org0f3ac4c" class="outline-4">
+<h4 id="org0f3ac4c">Topic 12: Scripting Languages and barebones intro to JavaScript</h4>
+<div class="outline-text-4" id="text-org0f3ac4c">
+</div>
+<ul class="org-ul">
+<li><a id="org09b206d"></a>Learning Objectives<br /></li>
+
+<li><a id="org550b861"></a>Activities<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcacb208" class="outline-3">
+<h3 id="m4">Module 4 Web Technology &amp; Software Construction</h3>
+<div class="outline-text-3" id="text-m4">
+</div>
+
+<div id="outline-container-orge5f56e9" class="outline-4">
+<h4 id="orge5f56e9">Topic 13: Specifications and other technical documents</h4>
+<div class="outline-text-4" id="text-orge5f56e9">
+</div>
+<ul class="org-ul">
+<li><a id="org1f7554d"></a>Learning Objectives<br /></li>
+
+<li><a id="org143f442"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org6d95bc1"></a>Lecture Slides<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org7dfc01e" class="outline-4">
+<h4 id="org7dfc01e">Topic 14: Web Development and HTTP Protocol</h4>
+</div>
+
+<div id="outline-container-orgf761b7b" class="outline-4">
+<h4 id="orgf761b7b">Topic 15: Separating Content from Presentation</h4>
+</div>
+</div>
+
+
+<div id="outline-container-orgee5de13" class="outline-3">
+<h3 id="m5">Module 5 Web design &amp; Software Delivery</h3>
+<div class="outline-text-3" id="text-m5">
+</div>
+
+<div id="outline-container-org99eb97d" class="outline-4">
+<h4 id="org99eb97d">Topic 16: HTML continued, maybe intro to Web  Scraping</h4>
+</div>
+
+<div id="outline-container-orgeed1040" class="outline-4">
+<h4 id="orgeed1040">Topic 17: Continuous Integration for Automated Testing</h4>
+</div>
+
+<div id="outline-container-orgb8466e1" class="outline-4">
+<h4 id="orgb8466e1">Topic 18: Software Testing and measuring development and other quality metrics</h4>
+</div>
+</div>
+
+<div id="outline-container-org2fe4db5" class="outline-3">
+<h3 id="org2fe4db5">Summary</h3>
+<div class="outline-text-3" id="text-org2fe4db5">
+<p>
+To summarize the course in a short one-liner for each week:
+</p>
+
+<p>
+Module 1: Collaboration is challenging. Communication is challenging.
+</p>
+
+<p>
+Module 2: There are many practices and tools to collaborate effectively.
+</p>
+
+<p>
+Module 3: Technical documentation comes in all forms to cover all kinds of technical inventions&#x2026; RTFM.
+</p>
+
+<p>
+Module 4: Programming is to plumbing as software development is running a restaurant.
+</p>
+
+<p>
+Module 5: Delivery is juggling end user needs and quality.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+The blank cells are left as an exercise for the student to practice estimating projects.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Katherine Chuang</p>
+<p class="date">Created: 2020-07-19 Sun 13:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

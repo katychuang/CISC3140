@@ -1,0 +1,345 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/style.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css"/>
+#+HTML_HEAD: <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+#+TITLE:    CISC 3140
+#+SUBTITLE:  Design and Implementation of Software Applications 2
+#+SUBTITLE:  Department of Computer & Information Science, Brooklyn College
+#+AUTHOR:    Katherine Chuang
+#+EMAIL:     chuang@sci.brooklyn.cuny.edu
+#+UNIVERSITY: Brooklyn College
+#+DEPARTMENT: Department of CIS
+
+#+EXPORT_FILE_NAME: ../html/index.html
+
+#+OPTIONS:   H:3 num:n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+ALT_TITLE: Lecture Notes
+
+* Introduction to Summer course
+:PROPERTIES:
+:UNNUMBERED: toc
+:END:
+
+This is the summer version of the course that is condensed to 5 weeks. In the *Lecture Notes* section below, each module is meant to be covered during 1 week of the course. Within each module are between 3-5 topics, each with a set of /Learning Objectives/ and /Activities/ outlined.
+
+The contents of this document is intended to serve both students who are taking the course and the instructor re-teaching the course.
+
+
+* Logistics
+:PROPERTIES:
+:UNNUMBERED: toc
+:CUSTOM_ID: logistics
+:END:
+#+OPTIONS: toc:2
+#+TOC: tables
+
+** Course schedules
+#+TOC: headlines local
+
+This section describes how the learning modules are structured, correlating to each week.
+
+*** Weekly Outcomes
+:PROPERTIES:
+:UNNUMBERED: toc
+:END:
+
+Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
+
++ *Open book quiz* to ensure students knows where to reference materials for that week (Friday)
++ *Reflective activity* based on lecture and reading (Sunday)
++ *Homework assignment* related to the module (Tuesday)
+
+#+CAPTION: Course Schedule
+|-------+------------------------------------------------------------------+-----------------------------------|
+| Week  | Module                                                           | Assessments                       |
+|-------+------------------------------------------------------------------+-----------------------------------|
+| <c5>  | <l30>                                                            |                                   |
+|   1   | Module 1 Introduction to Software Teams                          | Discussion based on reading, Quiz |
+|   2   | Module 2 Managing Software Projects. Building Software as a Team | Collaborative Activity, Quiz      |
+|   3   | Module 3 Importance of Specifications                            | Collaborative Activity, Quiz      |
+|   4   | Module 4 Web Technology & Software Construction                  | Collaborative Activity, Quiz      |
+|   5   | Module 5 Web design & Software Delivery                          | Collaborative Activity, Quiz      |
+| Final |                                                                  | Cumulative Exam                   |
+|-------+------------------------------------------------------------------+-----------------------------------|
+
+
+
+
+/Instructor note/ This weekly "checkpoint" structure seems to work well for the because there are a vast number of "new things" that the students are learning in this course for the first time ever. Weekly checks are constructed to ensure different levels of cognition are utilized with the course material. Due dates are spread over different days to aid in student's time management abilities and also to help with the workflow of grading turnaround time.
+*** Design of Homework Activities
+
+The first homework assignment focuses on the challenges of communication and more specifically, shared decision making "on the fly" without any communication policies in place. The rest of the homeworks are more technical in nature, meaning the student will have to practice looking for and reading technical documents to complete certain suggested tasks.
+
+
+** Grades and Points allocation
+
+*** Required activities
+
+Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
+
++ Open book quiz to ensure students knows where to reference materials for that week (Friday)
++ An activity based on reflecting over the lecture and reading (Sunday)
++ Hands on homework assignment related to the module (Tuesday)
+
+All items must be completed by their due dates for full points.
+
+
+#+CAPTION: Summary of scored activities each week
+|    Week    | Quiz | Homework | Discussion | Accumulating Total Points[fn:acc] |
+|------------+------+----------+------------+-----------------------------------|
+|    <c>     | <c>  |   <c>    |    <c>     |                                   |
+|     1      |  8   |    8     |     1      |                                17 |
+|     2      |  8   |    8     |     1      |                                   |
+|     3      |  8   |    8     |     1      |                                   |
+|     4      |  8   |    8     |     1      |                                   |
+|     5      |  8   |    8     |     1      |                                   |
+|------------+------+----------+------------+-----------------------------------|
+| Final Exam |  15  |          |            |                               100 |
+|------------+------+----------+------------+-----------------------------------|
+|   Total    |      |          |            |                               100 |
+|------------+------+----------+------------+-----------------------------------|
+
+[fn:acc] The blank cells are left as an exercise for the student to practice estimating projects.
+
+*** Extra Credit activities
+
+The goal of extra credit is to enhance absorption of the course material, by allowing students to summarize their reading or class discussion activity to wiki pages.
+
+The purpose of the wiki is to potentially serve as a study guide for the final exam at the end of the semester.
+
+
+* Learning Modules
+:PROPERTIES:
+:UNNUMBERED: toc
+:END:
+
+#+OPTIONS: toc:3
+#+TOC: headlines 1 local
+
+** Module 1 Introduction to Software Teams
+:PROPERTIES:
+:UNNUMBERED: toc
+:CUSTOM_ID: m1
+:END:
+
+#+TOC: headlines 3 local
+
+
+In this first week, we focus on the world of software development as a whole.
+
+In lecture 1, we start with what is software, what is the purpose of software, and why is software created? By whom? For whom? These are some of the questions to think about why a software project exists, to better understand the overall context.
+
+Next in lecture 2 we start looking at the role of the software development team and some of the challenges they face in delivering quality. This is to help you start reflecting about what you know relating to software development today.
+
+In lecture 3 we start looking at the software team, how the structure of team organization relates to collaborating on project(s).
+
+This week is more focused on communication. There are no programming assignments, but instead there is a group activity where you discuss with your group to try making a group decision.
+
+*** Topic 1: What is Software
+
+**** Learning Objectives
+This course covers the tools and techniques for large scale software development.
+
+***** What is software? What is considered large-scale software?
+
+***** What makes large-scale software more challenging than a mini software project?
+
+***** What are qualities of a senior software engineer?
+
+**** Activities
+
+***** Lecture [[https://docs.google.com/presentation/d/1iZ4JECgPQwAJDCw3PJkySlBYmSsb0rSM9_kkzrME3d8/edit][What is Software?]] covers the relationship of software to business goals. Software production (especially the lucrative variety) is often done in order to achieve business aims. There are open source software projects as well that focus on non-capitalistic goals.
+***** Read [[https://link.springer.com/article/10.1007/s10664-017-9524-2][Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation]] to understand large-scale software concerns (at minimum, the introduction section)
+***** Watch [[https://www.youtube.com/watch?v=JxkEkWpo6Vw][Difference between Application and System Software]]. This video describes two common categories of software. In this class we're focusing more on the production of application (end user) software, and using some system software to achieve the end goal.
+
+*** Topic 2: Engineering Discipline
+
+**** Learning Objectives
+
+*** Topic 3: Software Teams (Structures)
+
+
+** Module 2 Managing Software Projects
+:PROPERTIES:
+:CUSTOM_ID: m2
+:UNNUMBERED: TOC
+:END:
+
+
+This week we dive into building software as a team - the challenges and some of the approaches to manage complexity. and in particular some practices in managing software projects. The topics in this module focuses on the various processes that a team or individuals on a team might use to align themselves to work together (such as techniques to agree on policies or milestones, or more technically like how to share files and developing environments).
+
+Proposed schedule of completion is as follows, however feel free to read ahead.
+
+- Before Monday: Lectures 4 & 5
+- Before Tuesday: Lecture 6
+- Before Wednesday: Lecture 7
+- Before Thursday: Lecture 8
+
+
+*** Topic 4: Process
+
+**** Learning Objectives
+
+***** Importance of Process in producing consistency and with quality
+
+***** Where Software Engineering and SDLC come from
+
+***** Software Engineering principles
+
+**** Activities
+
+***** Lecture: Process in Software Engineering
+***** Read No Silver Bullets to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.
+***** Read A Brief History of Software Engineering  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?
+***** Read Chapter 1 of Seriously Good Software (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality
+
+*** Topic 5: Project Estimations
+
+**** Learning Objectives
+
+***** General purpose of project planning
+
+***** Gathering requirements
+
+***** Importance of Specifications
+
+**** Activities
+
+***** Lecture: [[https://docs.google.com/presentation/d/1SFDq6ux2jE5FUB6d8bTIrEBfssEoqHNQsidlXYo8yRQ/edit?usp=sharing][Project Estimations]]
+
+***** Read: Software Tools and Techniques Report - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.
+
+***** Read: Successful Software Management Style: Steering and Balance - to get a sense of various considerations given to managing projects
+
+
+*** Topic 6: Terminal
+
+**** Learning Objectives
+
+***** Introduction to the terminal
+
+***** Accessing the manual page for a software
+
+***** Navigating the manual page
+
+***** Introduction to SSH
+
+**** Activities
+
+***** Lecture: [[https://docs.google.com/presentation/d/1ZGXvpvWRFXwgvU2iRDcjHbH3WHM8M5LNRc1SAkM3DCs/edit?usp=sharing][Terminal]]
+
+***** For those who are new to the terminal environment and need a little more guidance than the lecture, start with [[https://missing.csail.mit.edu/2020/course-shell/][Lecture 1 from Missing Semester of CS]] to understand what is the shell, and how to navigate it.
+***** /Suggested for those who do not have unix/linux access already or are new to installing software by command-line/, try accessing BC's Web Lab Linux Server using SSH (link to instructions). The homework assignment will required the command line interface (CLI).
+Discussion board
+
+
+*** Topic 7: Configuration Management
+
+**** Learning Objectives
+
+**** Activities
+
+*** Topic 8: VCS and Release Management
+
+**** Learning Objectives
+
+**** Activities
+
+** Module 3 Importance of Specifications
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: m3
+:END:
+
+
+This module focuses on the different kinds of documents to see how technical information is structured and presented. We'll focus more on a type of document called a specification. Technical writing is an art, it helps to see different examples. From this week until the end you'll be referencing different kinds of documents to get good at picking out key details.
+
+Alongside this theme we'll also look at different programming paradigms to see how problems can be expressed in different kinds of abstractions.
+
+*** Topic 9: Specifications and other technical documents
+
+
+
+**** Learning Objectives
+
+**** Activities
+
+***** Slides Specifications and other technical documents
+
+***** Read Pages 1-4 of The Algol 60 Report
+
+***** Discussion Activity
+
+*** Topic 10: Programming paradigms are different ways to express problems in code
+
+Programming is about abstraction. There are different kinds of abstractions than Object Oriented programming.
+
+**** Learning Objectives
+
+**** Activities
+
+***** Lecture: Programming Paradigms, Functional & Declarative Programming
+***** Read: Programming Paradigms for Dummies: What Every Programmer Should Know
+***** Post to discussion board
+
+*** Topic 11: Functional & declarative way with Scheme
+
+Scheme is a programming language with many variations.
+
+**** Learning Objectives
+
+**** Activities
+
+*** Topic 12: Scripting Languages and barebones intro to JavaScript
+
+**** Learning Objectives
+
+**** Activities
+
+** Module 4 Web Technology & Software Construction
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: m4
+:END:
+
+*** Topic 13: Specifications and other technical documents
+
+**** Learning Objectives
+
+**** Activities
+
+***** Lecture Slides
+
+*** Topic 14: Web Development and HTTP Protocol
+
+*** Topic 15: Separating Content from Presentation
+
+
+** Module 5 Web design & Software Delivery
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: m5
+:END:
+
+*** Topic 16: HTML continued, maybe intro to Web  Scraping
+
+*** Topic 17: Continuous Integration for Automated Testing
+
+*** Topic 18: Software Testing and measuring development and other quality metrics
+
+** Summary
+:PROPERTIES:
+:UNNUMBERED: toc
+:END:
+
+To summarize the course in a short one-liner for each week:
+
+Module 1: Collaboration is challenging. Communication is challenging.
+
+Module 2: There are many practices and tools to collaborate effectively.
+
+Module 3: Technical documentation comes in all forms to cover all kinds of technical inventions... RTFM.
+
+Module 4: Programming is to plumbing as software development is running a restaurant.
+
+Module 5: Delivery is juggling end user needs and quality.
