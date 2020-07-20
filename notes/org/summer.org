@@ -505,7 +505,9 @@ Scheme is a programming language with many variations.
 **** Activities:
 
 ***** Lecture TBD
-***** Read [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/][Chapter 1]] and [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-4/v-4/][Chapter 4]] of BDD from 50,000 feet
+***** Read select chapters of BDD in Action
+******  [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/][Chapter 1]]  BDD from 50,000 feet
+******  [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-4/v-4/][Chapter 4]] Defining and illustrating features
 
 ** Summary
 :PROPERTIES:
@@ -514,7 +516,7 @@ Scheme is a programming language with many variations.
 
 To summarize the course in a short one-liner for each week:
 
-- Module 1 :: Collaboration is challenging. Communication is challenging.
+- Module 1 :: Collaboration is challenging. Communication is hard.
 
 - Module 2 :: There are many practices and tools to collaborate effectively.
 
@@ -522,7 +524,8 @@ To summarize the course in a short one-liner for each week:
 
 - Module 4 :: Programming is to plumbing as software development is running a restaurant.
 
-- Module 5 :: Delivery is juggling end user needs and quality.
+- Module 5 :: Delivery is about juggling the end-user needs with software quality.
+
 * Bibliography
 :PROPERTIES:
 :UNNUMBERED: toc
@@ -530,3 +533,35 @@ To summarize the course in a short one-liner for each week:
 :END:
 
 This section will contain links to papers and books referenced.
+
+** Module 1
+- Dingsøyr, T., Moe, N.B., Fægri, T.E. et al. /Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation/. Empir Software Eng 23, 490–520 (2018). https://doi.org/10.1007/s10664-017-9524-2
+- Mindset Network (2014). Difference between Application and System Software [instructional video] from https://www.youtube.com/watch?v=JxkEkWpo6Vw
+- Leveson, N. and Turner, C.S., /An investigation of the Therac-25 accidents/, in Computer, vol. 26, no. 7, pp. 18-41, July 1993, doi: 10.1109/MC.1993.274940.
+- Conway, M.E. (1968) /How Do Committees Invent?/ F. D. Thompson Publications, Inc. from https://www.melconway.com/Home/Committees_Paper.html
+** Module 2
+- Wirth, N. (2008). /A Brief History of Software Engineering,/ in IEEE Annals of the History of Computing, vol. 30, no. 3, pp. 32-39. from https://ieeexplore.ieee.org/document/4617912/
+- Faella, M. (2020). Chapter 1 of /[[https://www.manning.com/books/seriously-good-software][Seriously Good Software]]/. Manning Publications. from https://livebook.manning.com/book/seriously-good-software/
+- Gallegos, F. (1985). /Software Tools and Techniques Report/ from EDP Auditing. Auerbach Publishers Inc. Archived by US Government Accountability Office. from https://www.gao.gov/products/128750
+- Royce, W. (2005). /Successful Software Management Style: Steering and Balance/. IEEE Softw. 22, 5 (September 2005), 40–47. DOI:https://doi.org/10.1109/MS.2005.138
+- Nickoloff, J. (2016). Chapter 1 of /[[https://www.manning.com/books/docker-in-action][Docker in Action]]./ Manning Publications. ISBN: 9781633430235 from https://livebook.manning.com/book/docker-in-action/
+- Chacon, S. Straub, B. (2014). /Pro Git/ 2nd edition. Apress. Online version from https://git-scm.com/book/en/v2
+- Collins-Sussman, B., Fitzpatrick, B.W., and Pilato, C.M. (2013). /Version Control with Subversion/  O'Reilly Media. Online version from http://svnbook.red-bean.com/
+** Module 3
+- The Algol 60 Report
+- Programming Paradigms for Dummies: What Every Programmer Should Know
+- Chapter 8: Recursion from Common Lisp
+- JS Books
+** Module 4
+- Chapter 1 of HTTP/2 in Action https://livebook.manning.com/book/http2-in-action/chapter-1/
+- Chapter 1 of API Design Patterns https://livebook.manning.com/book/api-design-patterns/chapter-1/v-5/
+- Hunter, K. L. (2017). /Irresistible APIs/. Manning Publications. ISBN: 9781617292552 from https://livebook.manning.com/book/irresistible-apis/
+- HTML Living Standard https://html.spec.whatwg.org/
+- Design for the Mind https://livebook.manning.com/book/design-for-the-mind/about-this-book/
+- CSS in Depth https://livebook.manning.com/book/css-in-depth
+** Module 5
+- Son, B. (2019). A beginner's guide to building DevOps pipelines with open source tools. Opensource.com From https://opensource.com/article/19/4/devops-pipeline
+- Atlassian CI/CD Guides https://www.atlassian.com/continuous-delivery/
+- Smart, J.F. (2014). /[[https://www.manning.com/books/bdd-in-action][BDD In Action]]./ 2nd Edition. Manning Publications. ISBN: 9781617291654. From https://livebook.manning.com/book/bdd-in-action-second-edition/
+  - [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/][Chapter 1]] Building Software that Makes a Difference, specifically *section 1.1 /BDD from 50,000 feet/*
+  - [[https://livebook.manning.com/book/bdd-in-action/chapter-4/13][Chapter 4]] Describing and Prioritizing Features

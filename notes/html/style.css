@@ -32,12 +32,23 @@
     list-style: circle;
 }
 
-body,
-/*div.outline-2, */
-#footnotes {
+body {
     margin-left: 400px;
+}
+
+body,
+#footnotes {
     max-width: 90ch;
 }
+
+#footnotes h2 {
+    font-size: 1rem;
+}
+
+#footnotes p {
+    font-size: 0.9rem;
+}
+
 
 #list-of-tables h2 {
     font-size: 1rem;
@@ -54,5 +65,5 @@ body,
 dl dd {
     text-align: left;
     padding-left: 10px;
-    font-style: italic;
+    font-stylehh: italic;
 }
