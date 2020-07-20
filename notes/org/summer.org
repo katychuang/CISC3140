@@ -8,21 +8,22 @@
 #+EMAIL:     chuang@sci.brooklyn.cuny.edu
 #+UNIVERSITY: Brooklyn College
 #+DEPARTMENT: Department of CIS
-
 #+EXPORT_FILE_NAME: ../html/index.html
 
-#+OPTIONS:   H:3 num:n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   H:3 num:n toc:2 \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+ALT_TITLE: Lecture Notes
 
 * Introduction to Summer course
 :PROPERTIES:
-:UNNUMBERED: toc
+:UNNUMBERED: notoc
 :END:
 
 This is the summer version of the course that is condensed to 5 weeks. In the *Lecture Notes* section below, each module is meant to be covered during 1 week of the course. Within each module are between 3-5 topics, each with a set of /Learning Objectives/ and /Activities/ outlined.
 
 The contents of this document is intended to serve both students who are taking the course and the instructor re-teaching the course.
+
+Each section is meant to be followed sequentially from Module 1 and Topic 1 through the end.
 
 
 * Logistics
@@ -34,13 +35,18 @@ The contents of this document is intended to serve both students who are taking 
 #+TOC: tables
 
 ** Course schedules
-#+TOC: headlines local
+:PROPERTIES:
+:UNNUMBERED: notoc
+:CUSTOM_ID: schedule
+:END:
+
+   #+TOC: headlines local
 
 This section describes how the learning modules are structured, correlating to each week.
 
 *** Weekly Outcomes
 :PROPERTIES:
-:UNNUMBERED: toc
+:UNNUMBERED: notoc
 :END:
 
 Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
@@ -72,6 +78,10 @@ The first homework assignment focuses on the challenges of communication and mor
 
 
 ** Grades and Points allocation
+:PROPERTIES:
+:UNNUMBERED: notoc
+:CUSTOM_ID: grades
+:END:
 
 *** Required activities
 
@@ -81,7 +91,7 @@ Typically in a week there are certain required activities a student must complet
 + An activity based on reflecting over the lecture and reading (Sunday)
 + Hands on homework assignment related to the module (Tuesday)
 
-All items must be completed by their due dates for full points.
+All items must be completed by their due dates for full points. It is expected that students adopt a calendar app to keep track of due dates, as the course is very fast pace.h
 
 
 #+CAPTION: Summary of scored activities each week
@@ -99,7 +109,7 @@ All items must be completed by their due dates for full points.
 |   Total    |      |          |            |                               100 |
 |------------+------+----------+------------+-----------------------------------|
 
-[fn:acc] The blank cells are left as an exercise for the student to practice estimating projects.
+[fn:acc] The blank cells in Table 2 are left as an exercise for the student to practice estimating projects milestones and prioritization.
 
 *** Extra Credit activities
 
@@ -107,14 +117,25 @@ The goal of extra credit is to enhance absorption of the course material, by all
 
 The purpose of the wiki is to potentially serve as a study guide for the final exam at the end of the semester.
 
+* Technology requirements
+:PROPERTIES:
+:UNNUMBERED: toc
+:CUSTOM_ID: server
+:END:
+
+Students would find it useful to utilize the Linux Server on campus. Students who need access should visit the web building, or contact the Linux Administrator Raymond Patitucci (rpatitucci [at] brooklyn.cuny.edu) by emailing 8 digit emplid and name.
+
 
 * Learning Modules
 :PROPERTIES:
 :UNNUMBERED: toc
+:CUSTOM_ID: modules
 :END:
 
-#+OPTIONS: toc:3
-#+TOC: headlines 1 local
+This course covers the tip of the iceberg on the principles used in software development. The goals for this course is for the student to gain proficiency in the collaborative software development process and develop analytical and expressive fluency in ability to work with a wide range of tooling. Mastery of fundamental principles in software engineering is a critical component to realize software applications and web technologies as a unified whole. Through take-home assignments, readings, and team projects students develop a range of abilities to abosrb and articulate critical information.
+
+#+OPTIONS: toc:4
+#+TOC: headlines 2 local
 
 ** Module 1 Introduction to Software Teams
 :PROPERTIES:
@@ -122,8 +143,8 @@ The purpose of the wiki is to potentially serve as a study guide for the final e
 :CUSTOM_ID: m1
 :END:
 
-#+TOC: headlines 3 local
-
+#+OPTIONS: toc:4
+#+TOC: headlines 1 local
 
 In this first week, we focus on the world of software development as a whole.
 
@@ -136,6 +157,9 @@ In lecture 3 we start looking at the software team, how the structure of team or
 This week is more focused on communication. There are no programming assignments, but instead there is a group activity where you discuss with your group to try making a group decision.
 
 *** Topic 1: What is Software
+:PROPERTIES:
+:CUSTOM_ID: t1
+:END:
 
 **** Learning Objectives
 This course covers the tools and techniques for large scale software development.
@@ -153,11 +177,37 @@ This course covers the tools and techniques for large scale software development
 ***** Watch [[https://www.youtube.com/watch?v=JxkEkWpo6Vw][Difference between Application and System Software]]. This video describes two common categories of software. In this class we're focusing more on the production of application (end user) software, and using some system software to achieve the end goal.
 
 *** Topic 2: Engineering Discipline
+:PROPERTIES:
+:CUSTOM_ID: t2
+:END:
+**** Learning Objectives
+***** Software is expensive to develop and maintain
+***** Software quality is important. Bugs can kill
+***** Quality can be encouraged through principles, processes, standards, and specifications
+
+**** Activities
+***** Lecture: [[https://docs.google.com/presentation/d/1DUvLmyym2nrbcSqI8VHcmeH5xOu1AaMwIaMA_1mjn4g/edit?usp=sharing][Programming as an engineering profession]]
+***** Read: [[https://web.stanford.edu/class/cs240/old/sp2014/readings/therac-25.pdf][An Investigation of the Therac-25 Accidents]]
+***** Post to discussion board for week 1, lecture 2
+
+*** Topic 3: Software Teams (Structures)
+:PROPERTIES:
+:CUSTOM_ID: t3
+:END:
 
 **** Learning Objectives
 
-*** Topic 3: Software Teams (Structures)
+***** Software development is complex, especially at large scale
+***** Each person on the team has a different perspective and agenda
+***** Software teams produce under these conditions
+***** Team cohesion through sharing values, agreed structures, strong leadership
+***** Large team size has side effects on communication
 
+**** Activities
+
+***** Lecture: [[https://docs.google.com/presentation/d/1Cf33Inht0-Iu70QAetwDPqDB5guBeKrCMFdWorA5GnA/edit?usp=sharing][Software Engineering Teams]]
+***** Read: "[[https://www.melconway.com/Home/Committees_Paper.html][How Do Committees Invent?]]" by Melvin E Conway
+***** Post to discussion board for week 1, lecture 3
 
 ** Module 2 Managing Software Projects
 :PROPERTIES:
@@ -165,10 +215,9 @@ This course covers the tools and techniques for large scale software development
 :UNNUMBERED: TOC
 :END:
 
-
 This week we dive into building software as a team - the challenges and some of the approaches to manage complexity. and in particular some practices in managing software projects. The topics in this module focuses on the various processes that a team or individuals on a team might use to align themselves to work together (such as techniques to agree on policies or milestones, or more technically like how to share files and developing environments).
 
-Proposed schedule of completion is as follows, however feel free to read ahead.
+Proposed schedule of completion is as follows, however students may read ahead.
 
 - Before Monday: Lectures 4 & 5
 - Before Tuesday: Lecture 6
@@ -177,7 +226,9 @@ Proposed schedule of completion is as follows, however feel free to read ahead.
 
 
 *** Topic 4: Process
-
+:PROPERTIES:
+:CUSTOM_ID: t4
+:END:
 **** Learning Objectives
 
 ***** Importance of Process in producing consistency and with quality
@@ -188,31 +239,36 @@ Proposed schedule of completion is as follows, however feel free to read ahead.
 
 **** Activities
 
-***** Lecture: Process in Software Engineering
-***** Read No Silver Bullets to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.
-***** Read A Brief History of Software Engineering  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?
-***** Read Chapter 1 of Seriously Good Software (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality
+***** Lecture: [[https://docs.google.com/presentation/d/1Wt40flOEduYGzFuTq2r3CQNRSQpRksdFNCm3TBGZcEw/edit?usp=sharing][Process in Software Engineering]]
+***** Read /No Silver Bullets/ to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.
+***** Read [[https://ieeexplore.ieee.org/document/4617912/][A Brief History of Software Engineering]]  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?
+***** Read [[https://livebook.manning.com/book/seriously-good-software/chapter-1/][Chapter 1]] of [[https://livebook.manning.com/book/seriously-good-software/][Seriously Good Software]] (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality
 
 *** Topic 5: Project Estimations
+:PROPERTIES:
+:CUSTOM_ID: t5
+:END:
 
 **** Learning Objectives
 
 ***** General purpose of project planning
 
-***** Gathering requirements
-
+***** Gathering requirements before beginning projects
 ***** Importance of Specifications
+***** Shift from waterfall model to agile methods for continuous feedback loop
 
 **** Activities
 
 ***** Lecture: [[https://docs.google.com/presentation/d/1SFDq6ux2jE5FUB6d8bTIrEBfssEoqHNQsidlXYo8yRQ/edit?usp=sharing][Project Estimations]]
 
-***** Read: Software Tools and Techniques Report - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.
+***** Read: [[https://www.gao.gov/products/128750][Software Tools and Techniques Report]] - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.
 
-***** Read: Successful Software Management Style: Steering and Balance - to get a sense of various considerations given to managing projects
-
+***** Read: /Successful Software Management Style: Steering and Balance/ - to get a sense of various considerations given to managing projects
 
 *** Topic 6: Terminal
+:PROPERTIES:
+:CUSTOM_ID: t6
+:END:
 
 **** Learning Objectives
 
@@ -230,20 +286,35 @@ Proposed schedule of completion is as follows, however feel free to read ahead.
 
 ***** For those who are new to the terminal environment and need a little more guidance than the lecture, start with [[https://missing.csail.mit.edu/2020/course-shell/][Lecture 1 from Missing Semester of CS]] to understand what is the shell, and how to navigate it.
 ***** /Suggested for those who do not have unix/linux access already or are new to installing software by command-line/, try accessing BC's Web Lab Linux Server using SSH (link to instructions). The homework assignment will required the command line interface (CLI).
-Discussion board
-
+***** Discussion board
 
 *** Topic 7: Configuration Management
-
+:PROPERTIES:
+:CUSTOM_ID: t7
+:END:
 **** Learning Objectives
+***** Process for making changes
+***** Automating the build process
 
 **** Activities
+***** Lecture: [[https://docs.google.com/presentation/d/1HU-MP79YbJTpwFtzgaePY6STLXR0MDchhXHpBgneMy0/edit?usp=sharing][Configuration Management]]
+***** Read: [[https://livebook.manning.com/book/docker-in-action/][Chapter 1]] of [[https://livebook.manning.com/book/docker-in-action/][Docker in Action]] - not meant to be read in great detail, just enough to understand why a developer would be concerned with development environments and testing environments, and setting them up.
+***** Post to discussion board
 
 *** Topic 8: VCS and Release Management
-
+:PROPERTIES:
+:CUSTOM_ID: t8
+:END:
 **** Learning Objectives
+***** Version Control Systems
+***** Centralized vs Decentralized VCS
+***** Managing Releases
 
 **** Activities
+***** Lecture: [[https://docs.google.com/presentation/d/1G_8E3PfV7CrQ0hnrEksrqIM6jyEuwMTbBYFJebWqbHE/edit?usp=sharing][Version Control Systems]],  [[https://docs.google.com/presentation/d/1ma7bz5TGw7ooOFXxzSAybFPAkDD8isDS4KYfyfV9yWE/edit?usp=sharing][Release Management]]
+***** Read: Chapters 1-2 of [[https://git-scm.com/book/en/v2][Git Book]]
+***** Read: Chapters 1-2 of [[http://svnbook.red-bean.com/][Subversion Book]]
+***** Post to discussion board
 
 ** Module 3 Importance of Specifications
 :PROPERTIES:
@@ -256,45 +327,77 @@ This module focuses on the different kinds of documents to see how technical inf
 
 Alongside this theme we'll also look at different programming paradigms to see how problems can be expressed in different kinds of abstractions.
 
-*** Topic 9: Specifications and other technical documents
-
-
+*** Topic 9: Technical Documents
+:PROPERTIES:
+:CUSTOM_ID: t9
+:END:
 
 **** Learning Objectives
+***** Understand what are specifications and other technical documents
+***** Being specific reduces errors and miscommunication
+***** Understand that every language has a specifications document
+***** No two documents are alike =)
+***** There is an art to technical writing
 
 **** Activities
-
-***** Slides Specifications and other technical documents
-
+***** Lecture: [[https://docs.google.com/presentation/d/1LrmM5AS5T8H8iZv3Ls4Xz1QwCXooIrnFMmoRL7HC0xc/edit?usp=sharing][Specifications and other technical documents]]
 ***** Read Pages 1-4 of The Algol 60 Report
 
 ***** Discussion Activity
 
-*** Topic 10: Programming paradigms are different ways to express problems in code
-
-Programming is about abstraction. There are different kinds of abstractions than Object Oriented programming.
+*** Topic 10: Programming paradigms
+:PROPERTIES:
+:CUSTOM_ID: t10
+:END:
 
 **** Learning Objectives
+***** Programming paradigms are different ways to express problems in code
+***** Programming is about abstraction.
+***** There are different kinds of abstractions beyond Object Oriented programming.
+***** These are different ways to express problems.
 
 **** Activities
 
-***** Lecture: Programming Paradigms, Functional & Declarative Programming
-***** Read: Programming Paradigms for Dummies: What Every Programmer Should Know
+***** Lecture: [[https://docs.google.com/presentation/d/1g1U8DmKEZktFEwhe-4UTVIMzDR_i48c42m85Dg5fFlw/edit?usp=sharing][Programming Paradigms]], [[https://docs.google.com/presentation/d/1qHyboov4wXOtk1X2H8OJ4n6IAHlZMfAAhoaVKnuyUi8/edit?usp=sharing][Functional & Declarative Programming]]
+***** Read: [[https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf][Programming Paradigms for Dummies: What Every Programmer Should Know]]
 ***** Post to discussion board
 
-*** Topic 11: Functional & declarative way with Scheme
+*** Topic 11: Functional & declarative (Scheme)
+:PROPERTIES:
+:CUSTOM_ID: t11
+:END:
 
 Scheme is a programming language with many variations.
 
 **** Learning Objectives
 
+***** Overview of the Scheme Programming Language
+***** Scheme views the world as lists (specifically linked lists)
+***** Scheme prefers using /recursion/ (i.e. map) instead of /iteration/ (i.e. for loop)
+
 **** Activities
 
-*** Topic 12: Scripting Languages and barebones intro to JavaScript
+***** Lecture: [[https://docs.google.com/presentation/d/1Qr8jGCUFSCWZYoZETAzlLx-0n9I3HktEWTxl74pIauQ/edit?usp=sharing][Starting in Scheme]]
+***** Read: [[https://www.cs.cmu.edu/~15110-f12/Touretzky-Common-Lisp-ch8.pdf][Chapter 8]]: Recursion from Common Lisp - to understand the concept of recursion and the advantages of doing so. There is a fun story about Martin and the Dragon.
+***** Post to discussion board
 
+*** Topic 12: Scripting Language (JavaScript)
+:PROPERTIES:
+:CUSTOM_ID: t12
+:END:
 **** Learning Objectives
+***** Overview of the JavaScript Language
+***** JavaScript is not Java (though both names start with the same 4 letters)
+***** Quirks of JavaScript
 
 **** Activities
+***** Lecture: Nuts & Bolts of JavaScript
+***** Read at least one of the following to get a sense of the JavaScript language and quirks. Some possibilities include...
+****** [[https://learnxinyminutes.com/docs/javascript/][Learn X in Y: JavaScript]]
+****** [[http://bonsaiden.github.io/JavaScript-Garden/][Javascript Garden]]
+****** [[http://jsforcats.com/][Javascript for Cats]]
+****** [[http://spencertipping.com/js-in-ten-minutes/js-in-ten-minutes.pdf][Javascript in Ten Minutes]]
+***** Post to the discussion board
 
 ** Module 4 Web Technology & Software Construction
 :PROPERTIES:
@@ -302,30 +405,107 @@ Scheme is a programming language with many variations.
 :CUSTOM_ID: m4
 :END:
 
-*** Topic 13: Specifications and other technical documents
+*** Topic 13: Databases & Queries
+:PROPERTIES:
+:CUSTOM_ID: t13
+:END:
 
 **** Learning Objectives
 
 **** Activities
 
-***** Lecture Slides
+***** Lecture Slides: TBD
+***** Read [[https://www.oreilly.com/library/view/relational-theory-for/9781449365431/ch01.html][Chapter 1]] of Relational Theory for Computer Professionals
+***** Post to discussion board
 
 *** Topic 14: Web Development and HTTP Protocol
+:PROPERTIES:
+:CUSTOM_ID: t14
+:END:
+
+**** Learning Objectives
+
+**** Activities
+***** Lecture: [[http://speakerdeck.com/katychuang/web-development-world][Web Development World]] ([[https://youtu.be/se5jxwSGqRI][video]])
+***** Read [[https://livebook.manning.com/book/http2-in-action/chapter-1/][Chapter 1]] of HTTP/2 in Action
+***** Read [[https://livebook.manning.com/book/api-design-patterns/chapter-1/v-5/][Chapter 1]] of API Design Patterns
+***** (optional) Read [[https://livebook.manning.com/book/irresistible-apis/about-this-book/][Irresistible APIs]] to get a sense of designing APIs well
+***** Take a look at the [[https://httpstatuses.com/][HTTP Statuses]] available to get a sense of how the numbering scheme works
+***** Post to discussion board
 
 *** Topic 15: Separating Content from Presentation
+:PROPERTIES:
+:CUSTOM_ID: t15
+:END:
 
+**** Learning Objectives
 
-** Module 5 Web design & Software Delivery
+***** Introduction to Design Concepts
+***** Stylesheets are declarative
+
+**** Activities
+***** Lecture: [[https://docs.google.com/presentation/d/1rUWwYf4bSmL0CrLmi6wryUFARC54ZtHDJSw1fplHIbU/edit?usp=sharing][Building for Web Browsers]] ([[https://youtu.be/vOwoS8vavpE][video]])
+***** Read [[https://html.spec.whatwg.org/][HTML Living Standard]] (dev version is fine) to get a broad sense of how the document is organized
+***** Read [[https://livebook.manning.com/book/design-for-the-mind/about-this-book/][Design for the Mind]]
+***** Read [[https://livebook.manning.com/book/css-in-depth][Chapter 1]] of CSS in Depth
+***** Post to discussion board
+
+** Module 5 Software Delivery
 :PROPERTIES:
 :UNNUMBERED: TOC
 :CUSTOM_ID: m5
 :END:
 
-*** Topic 16: HTML continued, maybe intro to Web  Scraping
+*** Topic 16: TBD
+:PROPERTIES:
+:CUSTOM_ID: t16
+:END:
 
-*** Topic 17: Continuous Integration for Automated Testing
+**** Learning Objectives:
 
-*** Topic 18: Software Testing and measuring development and other quality metrics
+***** HTML & JS continued
+***** perhaps intro to Web Scraping
+
+**** Activities:
+***** Lecture [[https://docs.google.com/presentation/d/1fuMHoHji4IcuxYZXAvbPMqlQrXyQXO3ifQMA6cncIuw/edit?usp=sharing][Web Developing with JavaScript]]
+***** Post to discussion board
+
+*** Topic 17: Continuous Integration
+:PROPERTIES:
+:CUSTOM_ID: t17
+:END:
+
+**** Learning Objectives:
+***** Continuous Integration goes hand in hand with automated test
+***** What is automated testing
+***** Advantages of Continuous Integration
+***** Understand options for configuring a CI tool
+
+**** Activities:
+
+***** Lecture TBD
+***** Read Travis CI Documentation
+****** [[https://travis-ci.org/getting_started][Getting Started Guide]]
+****** [[https://docs.travis-ci.com/user/tutorial/][Travis CI TutorialTravis CI Tutorial]]
+****** [[https://docs.travis-ci.com/][Travis CI Documentation]]
+***** Post to discussion board
+
+
+*** Topic 18: Software Quality & TDD
+:PROPERTIES:
+:CUSTOM_ID: t18
+:END:
+
+**** Learning Objectives:
+***** Measuring development progress
+***** Measuring quality of software produced
+***** Software Test and test driven development
+***** Business perspective of software quality
+
+**** Activities:
+
+***** Lecture TBD
+***** Read [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/][Chapter 1]] and [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-4/v-4/][Chapter 4]] of BDD from 50,000 feet
 
 ** Summary
 :PROPERTIES:
@@ -334,12 +514,19 @@ Scheme is a programming language with many variations.
 
 To summarize the course in a short one-liner for each week:
 
-Module 1: Collaboration is challenging. Communication is challenging.
+- Module 1 :: Collaboration is challenging. Communication is challenging.
 
-Module 2: There are many practices and tools to collaborate effectively.
+- Module 2 :: There are many practices and tools to collaborate effectively.
 
-Module 3: Technical documentation comes in all forms to cover all kinds of technical inventions... RTFM.
+- Module 3 :: Technical documentation comes in all forms to cover all kinds of technical inventions... RTFM.
 
-Module 4: Programming is to plumbing as software development is running a restaurant.
+- Module 4 :: Programming is to plumbing as software development is running a restaurant.
 
-Module 5: Delivery is juggling end user needs and quality.
+- Module 5 :: Delivery is juggling end user needs and quality.
+* Bibliography
+:PROPERTIES:
+:UNNUMBERED: toc
+:CUSTOM_ID: bibliography
+:END:
+
+This section will contain links to papers and books referenced.

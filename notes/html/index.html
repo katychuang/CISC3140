@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-07-19 Sun 13:29 -->
+<!-- 2020-07-19 Sun 23:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CISC 3140</title>
@@ -253,73 +253,59 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org556cd4b">Introduction to Summer course</a></li>
-<li><a href="#logistics">Logistics</a>
-<ul>
-<li><a href="#orgdb849b9">Course schedules</a>
-<ul>
-<li><a href="#org0f73bc9">Weekly Outcomes</a></li>
-<li><a href="#org6bdee82">Design of Homework Activities</a></li>
-</ul>
-</li>
-<li><a href="#orgf91ffc8">Grades and Points allocation</a>
-<ul>
-<li><a href="#org20bdf96">Required activities</a></li>
-<li><a href="#org34d942e">Extra Credit activities</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgc61ced4">Learning Modules</a>
+<li><a href="#logistics">Logistics</a></li>
+<li><a href="#server">Technology requirements</a></li>
+<li><a href="#modules">Learning Modules</a>
 <ul>
 <li><a href="#m1">Module 1 Introduction to Software Teams</a>
 <ul>
-<li><a href="#orga64d1a0">Topic 1: What is Software</a></li>
-<li><a href="#orgac128cf">Topic 2: Engineering Discipline</a></li>
-<li><a href="#org8a465f2">Topic 3: Software Teams (Structures)</a></li>
+<li><a href="#t1">Topic 1: What is Software</a></li>
+<li><a href="#t2">Topic 2: Engineering Discipline</a></li>
+<li><a href="#t3">Topic 3: Software Teams (Structures)</a></li>
 </ul>
 </li>
 <li><a href="#m2">Module 2 Managing Software Projects</a>
 <ul>
-<li><a href="#orgc41c894">Topic 4: Process</a></li>
-<li><a href="#org74fa22d">Topic 5: Project Estimations</a></li>
-<li><a href="#org8476627">Topic 6: Terminal</a></li>
-<li><a href="#orgb544612">Topic 7: Configuration Management</a></li>
-<li><a href="#org849f410">Topic 8: VCS and Release Management</a></li>
+<li><a href="#t4">Topic 4: Process</a></li>
+<li><a href="#t5">Topic 5: Project Estimations</a></li>
+<li><a href="#t6">Topic 6: Terminal</a></li>
+<li><a href="#t7">Topic 7: Configuration Management</a></li>
+<li><a href="#t8">Topic 8: VCS and Release Management</a></li>
 </ul>
 </li>
 <li><a href="#m3">Module 3 Importance of Specifications</a>
 <ul>
-<li><a href="#org135af92">Topic 9: Specifications and other technical documents</a></li>
-<li><a href="#org8a0f29f">Topic 10: Programming paradigms are different ways to express problems in code</a></li>
-<li><a href="#org21aae83">Topic 11: Functional &amp; declarative way with Scheme</a></li>
-<li><a href="#org0f3ac4c">Topic 12: Scripting Languages and barebones intro to JavaScript</a></li>
+<li><a href="#t9">Topic 9: Technical Documents</a></li>
+<li><a href="#t10">Topic 10: Programming paradigms</a></li>
+<li><a href="#t11">Topic 11: Functional &amp; declarative (Scheme)</a></li>
+<li><a href="#t12">Topic 12: Scripting Language (JavaScript)</a></li>
 </ul>
 </li>
 <li><a href="#m4">Module 4 Web Technology &amp; Software Construction</a>
 <ul>
-<li><a href="#orge5f56e9">Topic 13: Specifications and other technical documents</a></li>
-<li><a href="#org7dfc01e">Topic 14: Web Development and HTTP Protocol</a></li>
-<li><a href="#orgf761b7b">Topic 15: Separating Content from Presentation</a></li>
+<li><a href="#t13">Topic 13: Databases &amp; Queries</a></li>
+<li><a href="#t14">Topic 14: Web Development and HTTP Protocol</a></li>
+<li><a href="#t15">Topic 15: Separating Content from Presentation</a></li>
 </ul>
 </li>
-<li><a href="#m5">Module 5 Web design &amp; Software Delivery</a>
+<li><a href="#m5">Module 5 Software Delivery</a>
 <ul>
-<li><a href="#org99eb97d">Topic 16: HTML continued, maybe intro to Web  Scraping</a></li>
-<li><a href="#orgeed1040">Topic 17: Continuous Integration for Automated Testing</a></li>
-<li><a href="#orgb8466e1">Topic 18: Software Testing and measuring development and other quality metrics</a></li>
+<li><a href="#t16">Topic 16: TBD</a></li>
+<li><a href="#t17">Topic 17: Continuous Integration</a></li>
+<li><a href="#t18">Topic 18: Software Quality &amp; TDD</a></li>
 </ul>
 </li>
-<li><a href="#org2fe4db5">Summary</a></li>
+<li><a href="#org6568c93">Summary</a></li>
 </ul>
 </li>
+<li><a href="#bibliography">Bibliography</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org556cd4b" class="outline-2">
-<h2 id="org556cd4b">Introduction to Summer course</h2>
-<div class="outline-text-2" id="text-org556cd4b">
+<div id="outline-container-org27fbae8" class="outline-2">
+<h2 id="org27fbae8">Introduction to Summer course</h2>
+<div class="outline-text-2" id="text-org27fbae8">
 <p>
 This is the summer version of the course that is condensed to 5 weeks. In the <b>Lecture Notes</b> section below, each module is meant to be covered during 1 week of the course. Within each module are between 3-5 topics, each with a set of <i>Learning Objectives</i> and <i>Activities</i> outlined.
 </p>
@@ -327,11 +313,15 @@ This is the summer version of the course that is condensed to 5 weeks. In the <b
 <p>
 The contents of this document is intended to serve both students who are taking the course and the instructor re-teaching the course.
 </p>
+
+<p>
+Each section is meant to be followed sequentially from Module 1 and Topic 1 through the end.
+</p>
 </div>
 </div>
 
 
-<div id="outline-container-orgf6479cf" class="outline-2">
+<div id="outline-container-orgfc5ebcc" class="outline-2">
 <h2 id="logistics">Logistics</h2>
 <div class="outline-text-2" id="text-logistics">
 <div id="list-of-tables">
@@ -345,24 +335,17 @@ The contents of this document is intended to serve both students who are taking 
 </div>
 </div>
 
-<div id="outline-container-orgdb849b9" class="outline-3">
-<h3 id="orgdb849b9">Course schedules</h3>
-<div class="outline-text-3" id="text-orgdb849b9">
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org0f73bc9">Weekly Outcomes</a></li>
-<li><a href="#org6bdee82">Design of Homework Activities</a></li>
-</ul>
-</div>
-
+<div id="outline-container-org49e255e" class="outline-3">
+<h3 id="schedule">Course schedules</h3>
+<div class="outline-text-3" id="text-schedule">
 <p>
 This section describes how the learning modules are structured, correlating to each week.
 </p>
 </div>
 
-<div id="outline-container-org0f73bc9" class="outline-4">
-<h4 id="org0f73bc9">Weekly Outcomes</h4>
-<div class="outline-text-4" id="text-org0f73bc9">
+<div id="outline-container-org17d4739" class="outline-4">
+<h4 id="org17d4739">Weekly Outcomes</h4>
+<div class="outline-text-4" id="text-org17d4739">
 <p>
 Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
 </p>
@@ -437,9 +420,9 @@ Typically in a week there are certain required activities a student must complet
 </p>
 </div>
 </div>
-<div id="outline-container-org6bdee82" class="outline-4">
-<h4 id="org6bdee82">Design of Homework Activities</h4>
-<div class="outline-text-4" id="text-org6bdee82">
+<div id="outline-container-orgd8c8bec" class="outline-4">
+<h4 id="orgd8c8bec">Design of Homework Activities</h4>
+<div class="outline-text-4" id="text-orgd8c8bec">
 <p>
 The first homework assignment focuses on the challenges of communication and more specifically, shared decision making "on the fly" without any communication policies in place. The rest of the homeworks are more technical in nature, meaning the student will have to practice looking for and reading technical documents to complete certain suggested tasks.
 </p>
@@ -448,13 +431,14 @@ The first homework assignment focuses on the challenges of communication and mor
 </div>
 
 
-<div id="outline-container-orgf91ffc8" class="outline-3">
-<h3 id="orgf91ffc8">Grades and Points allocation</h3>
-<div class="outline-text-3" id="text-orgf91ffc8">
+<div id="outline-container-orge8a8df4" class="outline-3">
+<h3 id="grades">Grades and Points allocation</h3>
+<div class="outline-text-3" id="text-grades">
 </div>
-<div id="outline-container-org20bdf96" class="outline-4">
-<h4 id="org20bdf96">Required activities</h4>
-<div class="outline-text-4" id="text-org20bdf96">
+
+<div id="outline-container-org1f68c22" class="outline-4">
+<h4 id="org1f68c22">Required activities</h4>
+<div class="outline-text-4" id="text-org1f68c22">
 <p>
 Typically in a week there are certain required activities a student must complete to show minimal engagement with the course material:
 </p>
@@ -466,7 +450,7 @@ Typically in a week there are certain required activities a student must complet
 </ul>
 
 <p>
-All items must be completed by their due dates for full points.
+All items must be completed by their due dates for full points. It is expected that students adopt a calendar app to keep track of due dates, as the course is very fast pace.h
 </p>
 
 
@@ -556,9 +540,9 @@ All items must be completed by their due dates for full points.
 </div>
 </div>
 
-<div id="outline-container-org34d942e" class="outline-4">
-<h4 id="org34d942e">Extra Credit activities</h4>
-<div class="outline-text-4" id="text-org34d942e">
+<div id="outline-container-orgdaacd2f" class="outline-4">
+<h4 id="orgdaacd2f">Extra Credit activities</h4>
+<div class="outline-text-4" id="text-orgdaacd2f">
 <p>
 The goal of extra credit is to enhance absorption of the course material, by allowing students to summarize their reading or class discussion activity to wiki pages.
 </p>
@@ -571,33 +555,78 @@ The purpose of the wiki is to potentially serve as a study guide for the final e
 </div>
 </div>
 
+<div id="outline-container-org71f6e59" class="outline-2">
+<h2 id="server">Technology requirements</h2>
+<div class="outline-text-2" id="text-server">
+<p>
+Students would find it useful to utilize the Linux Server on campus. Students who need access should visit the web building, or contact the Linux Administrator Raymond Patitucci (rpatitucci [at] brooklyn.cuny.edu) by emailing 8 digit emplid and name.
+</p>
+</div>
+</div>
 
-<div id="outline-container-orgc61ced4" class="outline-2">
-<h2 id="orgc61ced4">Learning Modules</h2>
-<div class="outline-text-2" id="text-orgc61ced4">
+
+<div id="outline-container-org1489cb6" class="outline-2">
+<h2 id="modules">Learning Modules</h2>
+<div class="outline-text-2" id="text-modules">
+<p>
+This course covers the tip of the iceberg on the principles used in software development. The goals for this course is for the student to gain proficiency in the collaborative software development process and develop analytical and expressive fluency in ability to work with a wide range of tooling. Mastery of fundamental principles in software engineering is a critical component to realize software applications and web technologies as a unified whole. Through take-home assignments, readings, and team projects students develop a range of abilities to abosrb and articulate critical information.
+</p>
+
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#m1">Module 1 Introduction to Software Teams</a></li>
-<li><a href="#m2">Module 2 Managing Software Projects</a></li>
-<li><a href="#m3">Module 3 Importance of Specifications</a></li>
-<li><a href="#m4">Module 4 Web Technology &amp; Software Construction</a></li>
-<li><a href="#m5">Module 5 Web design &amp; Software Delivery</a></li>
-<li><a href="#org2fe4db5">Summary</a></li>
+<li><a href="#m1">Module 1 Introduction to Software Teams</a>
+<ul>
+<li><a href="#t1">Topic 1: What is Software</a></li>
+<li><a href="#t2">Topic 2: Engineering Discipline</a></li>
+<li><a href="#t3">Topic 3: Software Teams (Structures)</a></li>
+</ul>
+</li>
+<li><a href="#m2">Module 2 Managing Software Projects</a>
+<ul>
+<li><a href="#t4">Topic 4: Process</a></li>
+<li><a href="#t5">Topic 5: Project Estimations</a></li>
+<li><a href="#t6">Topic 6: Terminal</a></li>
+<li><a href="#t7">Topic 7: Configuration Management</a></li>
+<li><a href="#t8">Topic 8: VCS and Release Management</a></li>
+</ul>
+</li>
+<li><a href="#m3">Module 3 Importance of Specifications</a>
+<ul>
+<li><a href="#t9">Topic 9: Technical Documents</a></li>
+<li><a href="#t10">Topic 10: Programming paradigms</a></li>
+<li><a href="#t11">Topic 11: Functional &amp; declarative (Scheme)</a></li>
+<li><a href="#t12">Topic 12: Scripting Language (JavaScript)</a></li>
+</ul>
+</li>
+<li><a href="#m4">Module 4 Web Technology &amp; Software Construction</a>
+<ul>
+<li><a href="#t13">Topic 13: Databases &amp; Queries</a></li>
+<li><a href="#t14">Topic 14: Web Development and HTTP Protocol</a></li>
+<li><a href="#t15">Topic 15: Separating Content from Presentation</a></li>
+</ul>
+</li>
+<li><a href="#m5">Module 5 Software Delivery</a>
+<ul>
+<li><a href="#t16">Topic 16: TBD</a></li>
+<li><a href="#t17">Topic 17: Continuous Integration</a></li>
+<li><a href="#t18">Topic 18: Software Quality &amp; TDD</a></li>
+</ul>
+</li>
+<li><a href="#org6568c93">Summary</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2d3462e" class="outline-3">
+<div id="outline-container-orga8587a2" class="outline-3">
 <h3 id="m1">Module 1 Introduction to Software Teams</h3>
 <div class="outline-text-3" id="text-m1">
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga64d1a0">Topic 1: What is Software</a></li>
-<li><a href="#orgac128cf">Topic 2: Engineering Discipline</a></li>
-<li><a href="#org8a465f2">Topic 3: Software Teams (Structures)</a></li>
+<li><a href="#t1">Topic 1: What is Software</a></li>
+<li><a href="#t2">Topic 2: Engineering Discipline</a></li>
+<li><a href="#t3">Topic 3: Software Teams (Structures)</a></li>
 </ul>
 </div>
-
 
 <p>
 In this first week, we focus on the world of software development as a whole.
@@ -620,53 +649,89 @@ This week is more focused on communication. There are no programming assignments
 </p>
 </div>
 
-<div id="outline-container-orga64d1a0" class="outline-4">
-<h4 id="orga64d1a0">Topic 1: What is Software</h4>
-<div class="outline-text-4" id="text-orga64d1a0">
+<div id="outline-container-org18e731d" class="outline-4">
+<h4 id="t1">Topic 1: What is Software</h4>
+<div class="outline-text-4" id="text-t1">
 </div>
+
 <ul class="org-ul">
-<li><a id="org072af0f"></a>Learning Objectives<br />
-<div class="outline-text-5" id="text-org072af0f">
+<li><a id="org7924dda"></a>Learning Objectives<br />
+<div class="outline-text-5" id="text-org7924dda">
 <p>
 This course covers the tools and techniques for large scale software development.
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="org174b3e4"></a>What is software? What is considered large-scale software?<br /></li>
+<li><a id="org41b0180"></a>What is software? What is considered large-scale software?<br /></li>
 
-<li><a id="orga03f1c4"></a>What makes large-scale software more challenging than a mini software project?<br /></li>
+<li><a id="orgba18773"></a>What makes large-scale software more challenging than a mini software project?<br /></li>
 
-<li><a id="orgd527969"></a>What are qualities of a senior software engineer?<br /></li>
+<li><a id="orgff3e132"></a>What are qualities of a senior software engineer?<br /></li>
 </ul>
 </li>
 
-<li><a id="org0df136e"></a>Activities<br />
+<li><a id="orgb5d9dd1"></a>Activities<br />
 <ul class="org-ul">
-<li><a id="orgebdd23a"></a>Lecture <a href="https://docs.google.com/presentation/d/1iZ4JECgPQwAJDCw3PJkySlBYmSsb0rSM9_kkzrME3d8/edit">What is Software?</a> covers the relationship of software to business goals. Software production (especially the lucrative variety) is often done in order to achieve business aims. There are open source software projects as well that focus on non-capitalistic goals.<br /></li>
-<li><a id="orgd2a7a4a"></a>Read <a href="https://link.springer.com/article/10.1007/s10664-017-9524-2">Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation</a> to understand large-scale software concerns (at minimum, the introduction section)<br /></li>
-<li><a id="org711cf49"></a>Watch <a href="https://www.youtube.com/watch?v=JxkEkWpo6Vw">Difference between Application and System Software</a>. This video describes two common categories of software. In this class we're focusing more on the production of application (end user) software, and using some system software to achieve the end goal.<br /></li>
+<li><a id="org678935d"></a>Lecture <a href="https://docs.google.com/presentation/d/1iZ4JECgPQwAJDCw3PJkySlBYmSsb0rSM9_kkzrME3d8/edit">What is Software?</a> covers the relationship of software to business goals. Software production (especially the lucrative variety) is often done in order to achieve business aims. There are open source software projects as well that focus on non-capitalistic goals.<br /></li>
+<li><a id="orgdc5b307"></a>Read <a href="https://link.springer.com/article/10.1007/s10664-017-9524-2">Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation</a> to understand large-scale software concerns (at minimum, the introduction section)<br /></li>
+<li><a id="org1ec98a8"></a>Watch <a href="https://www.youtube.com/watch?v=JxkEkWpo6Vw">Difference between Application and System Software</a>. This video describes two common categories of software. In this class we're focusing more on the production of application (end user) software, and using some system software to achieve the end goal.<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-orgac128cf" class="outline-4">
-<h4 id="orgac128cf">Topic 2: Engineering Discipline</h4>
-<div class="outline-text-4" id="text-orgac128cf">
+<div id="outline-container-org9df61fe" class="outline-4">
+<h4 id="t2">Topic 2: Engineering Discipline</h4>
+<div class="outline-text-4" id="text-t2">
 </div>
 <ul class="org-ul">
-<li><a id="org878bf04"></a>Learning Objectives<br /></li>
+<li><a id="orgcf10ad8"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org495bbef"></a>Software is expensive to develop and maintain<br /></li>
+<li><a id="org51bf4da"></a>Software quality is important. Bugs can kill<br /></li>
+<li><a id="org815df70"></a>Quality can be encouraged through principles, processes, standards, and specifications<br /></li>
+</ul>
+</li>
+
+<li><a id="orgb7380de"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org198ecd5"></a>Lecture: <a href="https://docs.google.com/presentation/d/1DUvLmyym2nrbcSqI8VHcmeH5xOu1AaMwIaMA_1mjn4g/edit?usp=sharing">Programming as an engineering profession</a><br /></li>
+<li><a id="org0b5373e"></a>Read: <a href="https://web.stanford.edu/class/cs240/old/sp2014/readings/therac-25.pdf">An Investigation of the Therac-25 Accidents</a><br /></li>
+<li><a id="org432b937"></a>Post to discussion board for week 1, lecture 2<br /></li>
+</ul>
+</li>
 </ul>
 </div>
 
-<div id="outline-container-org8a465f2" class="outline-4">
-<h4 id="org8a465f2">Topic 3: Software Teams (Structures)</h4>
+<div id="outline-container-orgac46bc7" class="outline-4">
+<h4 id="t3">Topic 3: Software Teams (Structures)</h4>
+<div class="outline-text-4" id="text-t3">
+</div>
+
+<ul class="org-ul">
+<li><a id="org3c13077"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="orgb5706d5"></a>Software development is complex, especially at large scale<br /></li>
+<li><a id="orgcc5196d"></a>Each person on the team has a different perspective and agenda<br /></li>
+<li><a id="orge8ebfb9"></a>Software teams produce under these conditions<br /></li>
+<li><a id="orgd8994f7"></a>Team cohesion through sharing values, agreed structures, strong leadership<br /></li>
+<li><a id="org009043f"></a>Large team size has side effects on communication<br /></li>
+</ul>
+</li>
+
+<li><a id="org7d550cc"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="orge47eb3c"></a>Lecture: <a href="https://docs.google.com/presentation/d/1Cf33Inht0-Iu70QAetwDPqDB5guBeKrCMFdWorA5GnA/edit?usp=sharing">Software Engineering Teams</a><br /></li>
+<li><a id="org1b73e26"></a>Read: "<a href="https://www.melconway.com/Home/Committees_Paper.html">How Do Committees Invent?</a>" by Melvin E Conway<br /></li>
+<li><a id="org014f078"></a>Post to discussion board for week 1, lecture 3<br /></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
-
-<div id="outline-container-org393f6e5" class="outline-3">
+<div id="outline-container-org1e3a1b3" class="outline-3">
 <h3 id="m2">Module 2 Managing Software Projects</h3>
 <div class="outline-text-3" id="text-m2">
 <p>
@@ -674,7 +739,7 @@ This week we dive into building software as a team - the challenges and some of 
 </p>
 
 <p>
-Proposed schedule of completion is as follows, however feel free to read ahead.
+Proposed schedule of completion is as follows, however students may read ahead.
 </p>
 
 <ul class="org-ul">
@@ -686,119 +751,138 @@ Proposed schedule of completion is as follows, however feel free to read ahead.
 </div>
 
 
-<div id="outline-container-orgc41c894" class="outline-4">
-<h4 id="orgc41c894">Topic 4: Process</h4>
-<div class="outline-text-4" id="text-orgc41c894">
+<div id="outline-container-orgf02d6f8" class="outline-4">
+<h4 id="t4">Topic 4: Process</h4>
+<div class="outline-text-4" id="text-t4">
 </div>
 <ul class="org-ul">
-<li><a id="org45b944b"></a>Learning Objectives<br />
+<li><a id="orge5d21fa"></a>Learning Objectives<br />
 <ul class="org-ul">
-<li><a id="org6c490a1"></a>Importance of Process in producing consistency and with quality<br /></li>
+<li><a id="org31def2d"></a>Importance of Process in producing consistency and with quality<br /></li>
 
-<li><a id="org5102c53"></a>Where Software Engineering and SDLC come from<br /></li>
+<li><a id="orgb6c7342"></a>Where Software Engineering and SDLC come from<br /></li>
 
-<li><a id="org4861636"></a>Software Engineering principles<br /></li>
+<li><a id="orgdb8950b"></a>Software Engineering principles<br /></li>
 </ul>
 </li>
 
-<li><a id="orgb0babf6"></a>Activities<br />
+<li><a id="orga589700"></a>Activities<br />
 <ul class="org-ul">
-<li><a id="org6270ef4"></a>Lecture: Process in Software Engineering<br /></li>
-<li><a id="orgcb18c5d"></a>Read No Silver Bullets to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.<br /></li>
-<li><a id="org0be8ce6"></a>Read A Brief History of Software Engineering  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?<br /></li>
-<li><a id="org77d0992"></a>Read Chapter 1 of Seriously Good Software (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality<br /></li>
-</ul>
-</li>
-</ul>
-</div>
-
-<div id="outline-container-org74fa22d" class="outline-4">
-<h4 id="org74fa22d">Topic 5: Project Estimations</h4>
-<div class="outline-text-4" id="text-org74fa22d">
-</div>
-<ul class="org-ul">
-<li><a id="orgb8e435f"></a>Learning Objectives<br />
-<ul class="org-ul">
-<li><a id="org6e5ec42"></a>General purpose of project planning<br /></li>
-
-<li><a id="org74ac6b2"></a>Gathering requirements<br /></li>
-
-<li><a id="org47221a7"></a>Importance of Specifications<br /></li>
-</ul>
-</li>
-
-<li><a id="org1fb2d34"></a>Activities<br />
-<ul class="org-ul">
-<li><a id="org2acde46"></a>Lecture: <a href="https://docs.google.com/presentation/d/1SFDq6ux2jE5FUB6d8bTIrEBfssEoqHNQsidlXYo8yRQ/edit?usp=sharing">Project Estimations</a><br /></li>
-
-<li><a id="org1cad637"></a>Read: Software Tools and Techniques Report - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.<br /></li>
-
-<li><a id="org3c303e0"></a>Read: Successful Software Management Style: Steering and Balance - to get a sense of various considerations given to managing projects<br /></li>
+<li><a id="org6d59507"></a>Lecture: <a href="https://docs.google.com/presentation/d/1Wt40flOEduYGzFuTq2r3CQNRSQpRksdFNCm3TBGZcEw/edit?usp=sharing">Process in Software Engineering</a><br /></li>
+<li><a id="orga16236b"></a>Read <i>No Silver Bullets</i> to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.<br /></li>
+<li><a id="org8f1a7de"></a>Read <a href="https://ieeexplore.ieee.org/document/4617912/">A Brief History of Software Engineering</a>  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?<br /></li>
+<li><a id="org3f9b2b8"></a>Read <a href="https://livebook.manning.com/book/seriously-good-software/chapter-1/">Chapter 1</a> of <a href="https://livebook.manning.com/book/seriously-good-software/">Seriously Good Software</a> (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-
-<div id="outline-container-org8476627" class="outline-4">
-<h4 id="org8476627">Topic 6: Terminal</h4>
-<div class="outline-text-4" id="text-org8476627">
+<div id="outline-container-org9c15958" class="outline-4">
+<h4 id="t5">Topic 5: Project Estimations</h4>
+<div class="outline-text-4" id="text-t5">
 </div>
+
 <ul class="org-ul">
-<li><a id="org917bc09"></a>Learning Objectives<br />
+<li><a id="org3feef5b"></a>Learning Objectives<br />
 <ul class="org-ul">
-<li><a id="org60a5312"></a>Introduction to the terminal<br /></li>
+<li><a id="org6580452"></a>General purpose of project planning<br /></li>
 
-<li><a id="org21e2b99"></a>Accessing the manual page for a software<br /></li>
-
-<li><a id="orga592dba"></a>Navigating the manual page<br /></li>
-
-<li><a id="org4934ab4"></a>Introduction to SSH<br /></li>
+<li><a id="orgde4b5ae"></a>Gathering requirements before beginning projects<br /></li>
+<li><a id="orge1877c4"></a>Importance of Specifications<br /></li>
+<li><a id="org6b0ed17"></a>Shift from waterfall model to agile methods for continuous feedback loop<br /></li>
 </ul>
 </li>
 
-<li><a id="orgfb89e70"></a>Activities<br />
+<li><a id="orge13d019"></a>Activities<br />
 <ul class="org-ul">
-<li><a id="org6a174f7"></a>Lecture: <a href="https://docs.google.com/presentation/d/1ZGXvpvWRFXwgvU2iRDcjHbH3WHM8M5LNRc1SAkM3DCs/edit?usp=sharing">Terminal</a><br /></li>
+<li><a id="org00f1767"></a>Lecture: <a href="https://docs.google.com/presentation/d/1SFDq6ux2jE5FUB6d8bTIrEBfssEoqHNQsidlXYo8yRQ/edit?usp=sharing">Project Estimations</a><br /></li>
 
-<li><a id="orgd727fa0"></a>For those who are new to the terminal environment and need a little more guidance than the lecture, start with <a href="https://missing.csail.mit.edu/2020/course-shell/">Lecture 1 from Missing Semester of CS</a> to understand what is the shell, and how to navigate it.<br /></li>
-<li><a id="orgfe82fb4"></a><i>Suggested for those who do not have unix/linux access already or are new to installing software by command-line</i>, try accessing BC's Web Lab Linux Server using SSH (link to instructions). The homework assignment will required the command line interface (CLI).<br />
-<div class="outline-text-6" id="text-orgfe82fb4">
-<p>
-Discussion board
-</p>
-</div>
-</li>
+<li><a id="org9a4db20"></a>Read: <a href="https://www.gao.gov/products/128750">Software Tools and Techniques Report</a> - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.<br /></li>
+
+<li><a id="orgebfacdc"></a>Read: <i>Successful Software Management Style: Steering and Balance</i> - to get a sense of various considerations given to managing projects<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-
-<div id="outline-container-orgb544612" class="outline-4">
-<h4 id="orgb544612">Topic 7: Configuration Management</h4>
-<div class="outline-text-4" id="text-orgb544612">
+<div id="outline-container-org102dd95" class="outline-4">
+<h4 id="t6">Topic 6: Terminal</h4>
+<div class="outline-text-4" id="text-t6">
 </div>
-<ul class="org-ul">
-<li><a id="orgaac489e"></a>Learning Objectives<br /></li>
 
-<li><a id="orga2e3e15"></a>Activities<br /></li>
+<ul class="org-ul">
+<li><a id="orgac42416"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="orgb3e3c44"></a>Introduction to the terminal<br /></li>
+
+<li><a id="orge299093"></a>Accessing the manual page for a software<br /></li>
+
+<li><a id="org95288b9"></a>Navigating the manual page<br /></li>
+
+<li><a id="orgc1454ba"></a>Introduction to SSH<br /></li>
+</ul>
+</li>
+
+<li><a id="org99421b1"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org3a62f56"></a>Lecture: <a href="https://docs.google.com/presentation/d/1ZGXvpvWRFXwgvU2iRDcjHbH3WHM8M5LNRc1SAkM3DCs/edit?usp=sharing">Terminal</a><br /></li>
+
+<li><a id="org298a5ec"></a>For those who are new to the terminal environment and need a little more guidance than the lecture, start with <a href="https://missing.csail.mit.edu/2020/course-shell/">Lecture 1 from Missing Semester of CS</a> to understand what is the shell, and how to navigate it.<br /></li>
+<li><a id="org360bc0b"></a><i>Suggested for those who do not have unix/linux access already or are new to installing software by command-line</i>, try accessing BC's Web Lab Linux Server using SSH (link to instructions). The homework assignment will required the command line interface (CLI).<br /></li>
+<li><a id="org87a3cc7"></a>Discussion board<br /></li>
+</ul>
+</li>
 </ul>
 </div>
 
-<div id="outline-container-org849f410" class="outline-4">
-<h4 id="org849f410">Topic 8: VCS and Release Management</h4>
-<div class="outline-text-4" id="text-org849f410">
+<div id="outline-container-org13a1826" class="outline-4">
+<h4 id="t7">Topic 7: Configuration Management</h4>
+<div class="outline-text-4" id="text-t7">
 </div>
 <ul class="org-ul">
-<li><a id="orgb03d115"></a>Learning Objectives<br /></li>
+<li><a id="org933e84a"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org39eef2b"></a>Process for making changes<br /></li>
+<li><a id="org59e0833"></a>Automating the build process<br /></li>
+</ul>
+</li>
 
-<li><a id="orgd2e2927"></a>Activities<br /></li>
+<li><a id="org3f44002"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org1727a68"></a>Lecture: <a href="https://docs.google.com/presentation/d/1HU-MP79YbJTpwFtzgaePY6STLXR0MDchhXHpBgneMy0/edit?usp=sharing">Configuration Management</a><br /></li>
+<li><a id="orgc5c2b2d"></a>Read: <a href="https://livebook.manning.com/book/docker-in-action/">Chapter 1</a> of <a href="https://livebook.manning.com/book/docker-in-action/">Docker in Action</a> - not meant to be read in great detail, just enough to understand why a developer would be concerned with development environments and testing environments, and setting them up.<br /></li>
+<li><a id="org6a75b9c"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org383d4ba" class="outline-4">
+<h4 id="t8">Topic 8: VCS and Release Management</h4>
+<div class="outline-text-4" id="text-t8">
+</div>
+<ul class="org-ul">
+<li><a id="org4d9b706"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org1a0b1f9"></a>Version Control Systems<br /></li>
+<li><a id="org785326f"></a>Centralized vs Decentralized VCS<br /></li>
+<li><a id="orgaea6431"></a>Managing Releases<br /></li>
+</ul>
+</li>
+
+<li><a id="orgd2c3568"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org3ebb93e"></a>Lecture: <a href="https://docs.google.com/presentation/d/1G_8E3PfV7CrQ0hnrEksrqIM6jyEuwMTbBYFJebWqbHE/edit?usp=sharing">Version Control Systems</a>,  <a href="https://docs.google.com/presentation/d/1ma7bz5TGw7ooOFXxzSAybFPAkDD8isDS4KYfyfV9yWE/edit?usp=sharing">Release Management</a><br /></li>
+<li><a id="orga8ddb37"></a>Read: Chapters 1-2 of <a href="https://git-scm.com/book/en/v2">Git Book</a><br /></li>
+<li><a id="orga29a7c7"></a>Read: Chapters 1-2 of <a href="http://svnbook.red-bean.com/">Subversion Book</a><br /></li>
+<li><a id="org1bbc0d4"></a>Post to discussion board<br /></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org50c3e0d" class="outline-3">
+<div id="outline-container-org17a6be7" class="outline-3">
 <h3 id="m3">Module 3 Importance of Specifications</h3>
 <div class="outline-text-3" id="text-m3">
 <p>
@@ -810,148 +894,297 @@ Alongside this theme we'll also look at different programming paradigms to see h
 </p>
 </div>
 
-<div id="outline-container-org135af92" class="outline-4">
-<h4 id="org135af92">Topic 9: Specifications and other technical documents</h4>
-<div class="outline-text-4" id="text-org135af92">
+<div id="outline-container-org7de83aa" class="outline-4">
+<h4 id="t9">Topic 9: Technical Documents</h4>
+<div class="outline-text-4" id="text-t9">
 </div>
+
 <ul class="org-ul">
-<li><a id="orgfab5773"></a>Learning Objectives<br /></li>
-
-<li><a id="org71a6c92"></a>Activities<br />
+<li><a id="org6387267"></a>Learning Objectives<br />
 <ul class="org-ul">
-<li><a id="orgd52dd38"></a>Slides Specifications and other technical documents<br /></li>
+<li><a id="org04f0d8c"></a>Understand what are specifications and other technical documents<br /></li>
+<li><a id="orgb161dc5"></a>Being specific reduces errors and miscommunication<br /></li>
+<li><a id="org1c1fefd"></a>Understand that every language has a specifications document<br /></li>
+<li><a id="orgdcbe82a"></a>No two documents are alike =)<br /></li>
+<li><a id="org21348f8"></a>There is an art to technical writing<br /></li>
+</ul>
+</li>
 
-<li><a id="org031446e"></a>Read Pages 1-4 of The Algol 60 Report<br /></li>
+<li><a id="orgae14f6d"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="orgaa67c8d"></a>Lecture: <a href="https://docs.google.com/presentation/d/1LrmM5AS5T8H8iZv3Ls4Xz1QwCXooIrnFMmoRL7HC0xc/edit?usp=sharing">Specifications and other technical documents</a><br /></li>
+<li><a id="orgab47e13"></a>Read Pages 1-4 of The Algol 60 Report<br /></li>
 
-<li><a id="org586c70d"></a>Discussion Activity<br /></li>
+<li><a id="org434f25d"></a>Discussion Activity<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-org8a0f29f" class="outline-4">
-<h4 id="org8a0f29f">Topic 10: Programming paradigms are different ways to express problems in code</h4>
-<div class="outline-text-4" id="text-org8a0f29f">
-<p>
-Programming is about abstraction. There are different kinds of abstractions than Object Oriented programming.
-</p>
+<div id="outline-container-orgfea0573" class="outline-4">
+<h4 id="t10">Topic 10: Programming paradigms</h4>
+<div class="outline-text-4" id="text-t10">
 </div>
 
 <ul class="org-ul">
-<li><a id="orgcd9f0c7"></a>Learning Objectives<br /></li>
-
-<li><a id="orga1d0943"></a>Activities<br />
+<li><a id="orgd5692e0"></a>Learning Objectives<br />
 <ul class="org-ul">
-<li><a id="org03cb116"></a>Lecture: Programming Paradigms, Functional &amp; Declarative Programming<br /></li>
-<li><a id="org68acf91"></a>Read: Programming Paradigms for Dummies: What Every Programmer Should Know<br /></li>
-<li><a id="org1495bcd"></a>Post to discussion board<br /></li>
+<li><a id="org0418652"></a>Programming paradigms are different ways to express problems in code<br /></li>
+<li><a id="orgb83b02d"></a>Programming is about abstraction.<br /></li>
+<li><a id="org20b1bc7"></a>There are different kinds of abstractions beyond Object Oriented programming.<br /></li>
+<li><a id="orgf2f8cc5"></a>These are different ways to express problems.<br /></li>
+</ul>
+</li>
+
+<li><a id="org2d92886"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org507fd41"></a>Lecture: <a href="https://docs.google.com/presentation/d/1g1U8DmKEZktFEwhe-4UTVIMzDR_i48c42m85Dg5fFlw/edit?usp=sharing">Programming Paradigms</a>, <a href="https://docs.google.com/presentation/d/1qHyboov4wXOtk1X2H8OJ4n6IAHlZMfAAhoaVKnuyUi8/edit?usp=sharing">Functional &amp; Declarative Programming</a><br /></li>
+<li><a id="org9f8e6d6"></a>Read: <a href="https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf">Programming Paradigms for Dummies: What Every Programmer Should Know</a><br /></li>
+<li><a id="org07f596c"></a>Post to discussion board<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-org21aae83" class="outline-4">
-<h4 id="org21aae83">Topic 11: Functional &amp; declarative way with Scheme</h4>
-<div class="outline-text-4" id="text-org21aae83">
+<div id="outline-container-orgddf6d4d" class="outline-4">
+<h4 id="t11">Topic 11: Functional &amp; declarative (Scheme)</h4>
+<div class="outline-text-4" id="text-t11">
 <p>
 Scheme is a programming language with many variations.
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="org812122f"></a>Learning Objectives<br /></li>
-
-<li><a id="orge37081c"></a>Activities<br /></li>
+<li><a id="orgc4a837a"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="orgb1fb9e2"></a>Overview of the Scheme Programming Language<br /></li>
+<li><a id="orgc552149"></a>Scheme views the world as lists (specifically linked lists)<br /></li>
+<li><a id="orgdda0dad"></a>Scheme prefers using <i>recursion</i> (i.e. map) instead of <i>iteration</i> (i.e. for loop)<br /></li>
 </ul>
-</div>
+</li>
 
-<div id="outline-container-org0f3ac4c" class="outline-4">
-<h4 id="org0f3ac4c">Topic 12: Scripting Languages and barebones intro to JavaScript</h4>
-<div class="outline-text-4" id="text-org0f3ac4c">
-</div>
+<li><a id="org788e7fe"></a>Activities<br />
 <ul class="org-ul">
-<li><a id="org09b206d"></a>Learning Objectives<br /></li>
-
-<li><a id="org550b861"></a>Activities<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgcacb208" class="outline-3">
-<h3 id="m4">Module 4 Web Technology &amp; Software Construction</h3>
-<div class="outline-text-3" id="text-m4">
-</div>
-
-<div id="outline-container-orge5f56e9" class="outline-4">
-<h4 id="orge5f56e9">Topic 13: Specifications and other technical documents</h4>
-<div class="outline-text-4" id="text-orge5f56e9">
-</div>
-<ul class="org-ul">
-<li><a id="org1f7554d"></a>Learning Objectives<br /></li>
-
-<li><a id="org143f442"></a>Activities<br />
-<ul class="org-ul">
-<li><a id="org6d95bc1"></a>Lecture Slides<br /></li>
+<li><a id="orga2dfdd3"></a>Lecture: <a href="https://docs.google.com/presentation/d/1Qr8jGCUFSCWZYoZETAzlLx-0n9I3HktEWTxl74pIauQ/edit?usp=sharing">Starting in Scheme</a><br /></li>
+<li><a id="org23250f7"></a>Read: <a href="https://www.cs.cmu.edu/~15110-f12/Touretzky-Common-Lisp-ch8.pdf">Chapter 8</a>: Recursion from Common Lisp - to understand the concept of recursion and the advantages of doing so. There is a fun story about Martin and the Dragon.<br /></li>
+<li><a id="org97bce5a"></a>Post to discussion board<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-org7dfc01e" class="outline-4">
-<h4 id="org7dfc01e">Topic 14: Web Development and HTTP Protocol</h4>
+<div id="outline-container-orgc62a17f" class="outline-4">
+<h4 id="t12">Topic 12: Scripting Language (JavaScript)</h4>
+<div class="outline-text-4" id="text-t12">
+</div>
+<ul class="org-ul">
+<li><a id="org8d965f1"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="orgc878c4e"></a>Overview of the JavaScript Language<br /></li>
+<li><a id="org678f3fc"></a>JavaScript is not Java (though both names start with the same 4 letters)<br /></li>
+<li><a id="org7247a47"></a>Quirks of JavaScript<br /></li>
+</ul>
+</li>
+
+<li><a id="org9420aea"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org9a22348"></a>Lecture: Nuts &amp; Bolts of JavaScript<br /></li>
+<li><a id="org38cba96"></a>Read at least one of the following to get a sense of the JavaScript language and quirks. Some possibilities include&#x2026;<br />
+<ul class="org-ul">
+<li><a id="org4b39472"></a><a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y: JavaScript</a><br /></li>
+<li><a id="orgb2f7f67"></a><a href="http://bonsaiden.github.io/JavaScript-Garden/">Javascript Garden</a><br /></li>
+<li><a id="org6d05891"></a><a href="http://jsforcats.com/">Javascript for Cats</a><br /></li>
+<li><a id="org50c8d0a"></a><a href="http://spencertipping.com/js-in-ten-minutes/js-in-ten-minutes.pdf">Javascript in Ten Minutes</a><br /></li>
+</ul>
+</li>
+<li><a id="org5cda9e5"></a>Post to the discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
-<div id="outline-container-orgf761b7b" class="outline-4">
-<h4 id="orgf761b7b">Topic 15: Separating Content from Presentation</h4>
+<div id="outline-container-orgb6f63d6" class="outline-3">
+<h3 id="m4">Module 4 Web Technology &amp; Software Construction</h3>
+<div class="outline-text-3" id="text-m4">
+</div>
+
+<div id="outline-container-org8967792" class="outline-4">
+<h4 id="t13">Topic 13: Databases &amp; Queries</h4>
+<div class="outline-text-4" id="text-t13">
+</div>
+
+<ul class="org-ul">
+<li><a id="org5bf8b0d"></a>Learning Objectives<br /></li>
+
+<li><a id="org535126f"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="orge275240"></a>Lecture Slides: TBD<br /></li>
+<li><a id="org2651333"></a>Read <a href="https://www.oreilly.com/library/view/relational-theory-for/9781449365431/ch01.html">Chapter 1</a> of Relational Theory for Computer Professionals<br /></li>
+<li><a id="orge865dcc"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-orgae4e5e1" class="outline-4">
+<h4 id="t14">Topic 14: Web Development and HTTP Protocol</h4>
+<div class="outline-text-4" id="text-t14">
+</div>
+
+<ul class="org-ul">
+<li><a id="org3acfc29"></a>Learning Objectives<br /></li>
+
+<li><a id="org73c4aef"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org8d15003"></a>Lecture: <a href="http://speakerdeck.com/katychuang/web-development-world">Web Development World</a> (<a href="https://youtu.be/se5jxwSGqRI">video</a>)<br /></li>
+<li><a id="org68e9e94"></a>Read <a href="https://livebook.manning.com/book/http2-in-action/chapter-1/">Chapter 1</a> of HTTP/2 in Action<br /></li>
+<li><a id="org6f7220c"></a>Read <a href="https://livebook.manning.com/book/api-design-patterns/chapter-1/v-5/">Chapter 1</a> of API Design Patterns<br /></li>
+<li><a id="org6a96bd3"></a>(optional) Read <a href="https://livebook.manning.com/book/irresistible-apis/about-this-book/">Irresistible APIs</a> to get a sense of designing APIs well<br /></li>
+<li><a id="orgcf0795b"></a>Take a look at the <a href="https://httpstatuses.com/">HTTP Statuses</a> available to get a sense of how the numbering scheme works<br /></li>
+<li><a id="org09f0ffe"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org520d063" class="outline-4">
+<h4 id="t15">Topic 15: Separating Content from Presentation</h4>
+<div class="outline-text-4" id="text-t15">
+</div>
+
+<ul class="org-ul">
+<li><a id="orgcf361b6"></a>Learning Objectives<br />
+<ul class="org-ul">
+<li><a id="org5c81af2"></a>Introduction to Design Concepts<br /></li>
+<li><a id="orgd2be534"></a>Stylesheets are declarative<br /></li>
+</ul>
+</li>
+
+<li><a id="orgd38c616"></a>Activities<br />
+<ul class="org-ul">
+<li><a id="org08b9b27"></a>Lecture: <a href="https://docs.google.com/presentation/d/1rUWwYf4bSmL0CrLmi6wryUFARC54ZtHDJSw1fplHIbU/edit?usp=sharing">Building for Web Browsers</a> (<a href="https://youtu.be/vOwoS8vavpE">video</a>)<br /></li>
+<li><a id="org5483754"></a>Read <a href="https://html.spec.whatwg.org/">HTML Living Standard</a> (dev version is fine) to get a broad sense of how the document is organized<br /></li>
+<li><a id="org973acaf"></a>Read <a href="https://livebook.manning.com/book/design-for-the-mind/about-this-book/">Design for the Mind</a><br /></li>
+<li><a id="org313996e"></a>Read <a href="https://livebook.manning.com/book/css-in-depth">Chapter 1</a> of CSS in Depth<br /></li>
+<li><a id="org35dbb64"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
-
-<div id="outline-container-orgee5de13" class="outline-3">
-<h3 id="m5">Module 5 Web design &amp; Software Delivery</h3>
+<div id="outline-container-org217038d" class="outline-3">
+<h3 id="m5">Module 5 Software Delivery</h3>
 <div class="outline-text-3" id="text-m5">
 </div>
 
-<div id="outline-container-org99eb97d" class="outline-4">
-<h4 id="org99eb97d">Topic 16: HTML continued, maybe intro to Web  Scraping</h4>
+<div id="outline-container-org0e063ec" class="outline-4">
+<h4 id="t16">Topic 16: TBD</h4>
+<div class="outline-text-4" id="text-t16">
 </div>
 
-<div id="outline-container-orgeed1040" class="outline-4">
-<h4 id="orgeed1040">Topic 17: Continuous Integration for Automated Testing</h4>
+<ul class="org-ul">
+<li><a id="orgbc7b9f3"></a>Learning Objectives:<br />
+<ul class="org-ul">
+<li><a id="orgfe93d9f"></a>HTML &amp; JS continued<br /></li>
+<li><a id="org1590ca0"></a>perhaps intro to Web Scraping<br /></li>
+</ul>
+</li>
+
+<li><a id="orgc0e996a"></a>Activities:<br />
+<ul class="org-ul">
+<li><a id="org7b7bc5e"></a>Lecture <a href="https://docs.google.com/presentation/d/1fuMHoHji4IcuxYZXAvbPMqlQrXyQXO3ifQMA6cncIuw/edit?usp=sharing">Web Developing with JavaScript</a><br /></li>
+<li><a id="orgc6f1ac0"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
 </div>
 
-<div id="outline-container-orgb8466e1" class="outline-4">
-<h4 id="orgb8466e1">Topic 18: Software Testing and measuring development and other quality metrics</h4>
+<div id="outline-container-orgb950f90" class="outline-4">
+<h4 id="t17">Topic 17: Continuous Integration</h4>
+<div class="outline-text-4" id="text-t17">
+</div>
+
+<ul class="org-ul">
+<li><a id="org7a68979"></a>Learning Objectives:<br />
+<ul class="org-ul">
+<li><a id="org05dfd3b"></a>Continuous Integration goes hand in hand with automated test<br /></li>
+<li><a id="org7128c02"></a>What is automated testing<br /></li>
+<li><a id="org40e4602"></a>Advantages of Continuous Integration<br /></li>
+<li><a id="org6231451"></a>Understand options for configuring a CI tool<br /></li>
+</ul>
+</li>
+
+<li><a id="org555fc08"></a>Activities:<br />
+<ul class="org-ul">
+<li><a id="orgb4fe3b6"></a>Lecture TBD<br /></li>
+<li><a id="orgef91959"></a>Read Travis CI Documentation<br />
+<ul class="org-ul">
+<li><a id="org717b2ef"></a><a href="https://travis-ci.org/getting_started">Getting Started Guide</a><br /></li>
+<li><a id="orga0c25f2"></a><a href="https://docs.travis-ci.com/user/tutorial/">Travis CI TutorialTravis CI Tutorial</a><br /></li>
+<li><a id="orgf93aa2f"></a><a href="https://docs.travis-ci.com/">Travis CI Documentation</a><br /></li>
+</ul>
+</li>
+<li><a id="org91ff9b8"></a>Post to discussion board<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="outline-container-orgc91e0b6" class="outline-4">
+<h4 id="t18">Topic 18: Software Quality &amp; TDD</h4>
+<div class="outline-text-4" id="text-t18">
+</div>
+
+<ul class="org-ul">
+<li><a id="org5ff64f5"></a>Learning Objectives:<br />
+<ul class="org-ul">
+<li><a id="org7179b7f"></a>Measuring development progress<br /></li>
+<li><a id="orgea3bc97"></a>Measuring quality of software produced<br /></li>
+<li><a id="org5330cf3"></a>Software Test and test driven development<br /></li>
+<li><a id="orgec9af7a"></a>Business perspective of software quality<br /></li>
+</ul>
+</li>
+
+<li><a id="org8536eb1"></a>Activities:<br />
+<ul class="org-ul">
+<li><a id="org5e5b85e"></a>Lecture TBD<br /></li>
+<li><a id="orgfc6924e"></a>Read <a href="https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/">Chapter 1</a> and <a href="https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-4/v-4/">Chapter 4</a> of BDD from 50,000 feet<br /></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-org2fe4db5" class="outline-3">
-<h3 id="org2fe4db5">Summary</h3>
-<div class="outline-text-3" id="text-org2fe4db5">
+<div id="outline-container-org6568c93" class="outline-3">
+<h3 id="org6568c93">Summary</h3>
+<div class="outline-text-3" id="text-org6568c93">
 <p>
 To summarize the course in a short one-liner for each week:
 </p>
 
-<p>
-Module 1: Collaboration is challenging. Communication is challenging.
-</p>
+<dl class="org-dl">
+<dt>Module 1</dt><dd>Collaboration is challenging. Communication is challenging.</dd>
 
-<p>
-Module 2: There are many practices and tools to collaborate effectively.
-</p>
+<dt>Module 2</dt><dd>There are many practices and tools to collaborate effectively.</dd>
 
-<p>
-Module 3: Technical documentation comes in all forms to cover all kinds of technical inventions&#x2026; RTFM.
-</p>
+<dt>Module 3</dt><dd>Technical documentation comes in all forms to cover all kinds of technical inventions&#x2026; RTFM.</dd>
 
-<p>
-Module 4: Programming is to plumbing as software development is running a restaurant.
-</p>
+<dt>Module 4</dt><dd>Programming is to plumbing as software development is running a restaurant.</dd>
 
-<p>
-Module 5: Delivery is juggling end user needs and quality.
-</p>
+<dt>Module 5</dt><dd>Delivery is juggling end user needs and quality.</dd>
+</dl>
 </div>
+</div>
+</div>
+<div id="outline-container-org73050cc" class="outline-2">
+<h2 id="bibliography">Bibliography</h2>
+<div class="outline-text-2" id="text-bibliography">
+<p>
+This section will contain links to papers and books referenced.
+</p>
 </div>
 </div>
 <div id="footnotes">
@@ -959,7 +1192,7 @@ Module 5: Delivery is juggling end user needs and quality.
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-The blank cells are left as an exercise for the student to practice estimating projects.
+The blank cells in Table 2 are left as an exercise for the student to practice estimating projects milestones and prioritization.
 </p></div></div>
 
 
@@ -967,7 +1200,7 @@ The blank cells are left as an exercise for the student to practice estimating p
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Katherine Chuang</p>
-<p class="date">Created: 2020-07-19 Sun 13:29</p>
+<p class="date">Created: 2020-07-19 Sun 23:19</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

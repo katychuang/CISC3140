@@ -10,10 +10,26 @@
     overflow: auto;
 }
 
-#table-of-contents ul {
-    list-style: none;
+#table-of-contents  #text-table-of-contents > ul {
     padding-left: 0;
+}
+
+#table-of-contents  #text-table-of-contents > ul > li {
+    list-style: none;
     font-weight: normal;
+}
+
+#table-of-contents  #text-table-of-contents > ul > li > ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+#text-table-of-contents > ul ul ul {
+    padding-left: 20px;
+}
+
+#text-table-of-contents ul ul ul li {
+    list-style: circle;
 }
 
 body,
@@ -33,4 +49,10 @@ body,
 
 #text-list-of-tables span{
     color: navy;
+}
+
+dl dd {
+    text-align: left;
+    padding-left: 10px;
+    font-style: italic;
 }

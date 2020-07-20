@@ -4,3 +4,6 @@
 [submodule "examples"]
 	path = examples
 	url = git@github.com:DataMascara/cisc3140.git
+[submodule "guides"]
+	path = guides
+	url = git@github.com:katychuang/getting-started-guides.git
