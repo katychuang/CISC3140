@@ -1,6 +1,3 @@
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/style.min.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css"/>
-#+HTML_HEAD: <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 #+TITLE:    CISC 3140
 #+SUBTITLE:  Design and Implementation of Software Applications 2
 #+SUBTITLE:  Department of Computer & Information Science, Brooklyn College
@@ -8,11 +5,18 @@
 #+EMAIL:     chuang@sci.brooklyn.cuny.edu
 #+UNIVERSITY: Brooklyn College
 #+DEPARTMENT: Department of CIS
-#+EXPORT_FILE_NAME: ../html/index.html
 
-#+OPTIONS:   H:3 num:n toc:2 \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../assets/style.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../assets/style.css"/>
+#+EXPORT_FILE_NAME: ../../../cisc3140-su20.github.io/lectures/index.html
+#+HTML_HEAD: <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+#+OPTIONS:   H:3 num:3n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+ALT_TITLE: Lecture Notes
+#+LANGUAGE: en
+
+
 
 * Introduction to Summer course
 :PROPERTIES:
@@ -23,7 +27,7 @@ This is the summer version of the course that is condensed to 5 weeks. In the *L
 
 The contents of this document is intended to serve both students who are taking the course and the instructor re-teaching the course.
 
-Each section is meant to be followed sequentially from Module 1 and Topic 1 through the end.
+Each section is meant to be followed sequentially, starting from Module 1 and Topic 1 and proceeded through to the end.
 
 
 * Logistics
@@ -135,6 +139,7 @@ Students would find it useful to utilize the Linux Server on campus. Students wh
 This course covers the tip of the iceberg on the principles used in software development. The goals for this course is for the student to gain proficiency in the collaborative software development process and develop analytical and expressive fluency in ability to work with a wide range of tooling. Mastery of fundamental principles in software engineering is a critical component to realize software applications and web technologies as a unified whole. Through take-home assignments, readings, and team projects students develop a range of abilities to abosrb and articulate critical information.
 
 #+OPTIONS: toc:4
+**Modules**
 #+TOC: headlines 2 local
 
 ** Module 1 Introduction to Software Teams
@@ -144,6 +149,8 @@ This course covers the tip of the iceberg on the principles used in software dev
 :END:
 
 #+OPTIONS: toc:4
+
+**Topics**
 #+TOC: headlines 1 local
 
 In this first week, we focus on the world of software development as a whole.
@@ -219,11 +226,13 @@ This week we dive into building software as a team - the challenges and some of 
 
 Proposed schedule of completion is as follows, however students may read ahead.
 
-- Before Monday: Lectures 4 & 5
-- Before Tuesday: Lecture 6
-- Before Wednesday: Lecture 7
-- Before Thursday: Lecture 8
+- Before Monday: Topics 4 & 5
+- Before Tuesday: Topic 6
+- Before Wednesday: Topic 7
+- Before Thursday: Topic 8
 
+**Topics**
+#+TOC: headlines 1 local
 
 *** Topic 4: Process
 :PROPERTIES:
@@ -240,8 +249,8 @@ Proposed schedule of completion is as follows, however students may read ahead.
 **** Activities
 
 ***** Lecture: [[https://docs.google.com/presentation/d/1Wt40flOEduYGzFuTq2r3CQNRSQpRksdFNCm3TBGZcEw/edit?usp=sharing][Process in Software Engineering]]
-***** Read /No Silver Bullets/ to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.
-***** Read [[https://ieeexplore.ieee.org/document/4617912/][A Brief History of Software Engineering]]  to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?
+***** Read /[[https://doi.org/10.1109/MC.1987.1663532][No Silver Bullets]]/ to understand the author's ideas about different areas of complexities in software development, and identify some of the solutions.
+***** Read [[https://doi.org/10.1109/MAHC.2008.33][A Brief History of Software Engineering]] [[file:../readings/A Brief History of Software Engineering.pdf][pdf]] to understand the evolution of programming languages over time. Such as how was 1960 different than the decades following?
 ***** Read [[https://livebook.manning.com/book/seriously-good-software/chapter-1/][Chapter 1]] of [[https://livebook.manning.com/book/seriously-good-software/][Seriously Good Software]] (read more chapters if you have time!) - read enough to understand how the author would go about measuring software quality
 
 *** Topic 5: Project Estimations
@@ -263,7 +272,7 @@ Proposed schedule of completion is as follows, however students may read ahead.
 
 ***** Read: [[https://www.gao.gov/products/128750][Software Tools and Techniques Report]] - just enough to get a sense of general layout of the report, and also so you have an idea of why it was published. The author describes motivations for the report.
 
-***** Read: /Successful Software Management Style: Steering and Balance/ - to get a sense of various considerations given to managing projects
+***** Read: /Successful Software Management Style: Steering and Balance/ - to get a sense of various considerations given to managing projects https://doi.org/10.1109/MS.2005.138
 
 *** Topic 6: Terminal
 :PROPERTIES:
@@ -279,6 +288,10 @@ Proposed schedule of completion is as follows, however students may read ahead.
 ***** Navigating the manual page
 
 ***** Introduction to SSH
+
+#+BEGIN_SRC shell
+ssh user@host
+#+END_SRC
 
 **** Activities
 
@@ -309,11 +322,24 @@ Proposed schedule of completion is as follows, however students may read ahead.
 ***** Version Control Systems
 ***** Centralized vs Decentralized VCS
 ***** Managing Releases
+**** Programs to explore for homework
+***** Git
+
+#+BEGIN_SRC shell
+git --version
+#+END_SRC
+
+
+***** Subversion
+#+BEGIN_SRC shell
+svn --version
+#+END_SRC
+
 
 **** Activities
 ***** Lecture: [[https://docs.google.com/presentation/d/1G_8E3PfV7CrQ0hnrEksrqIM6jyEuwMTbBYFJebWqbHE/edit?usp=sharing][Version Control Systems]],  [[https://docs.google.com/presentation/d/1ma7bz5TGw7ooOFXxzSAybFPAkDD8isDS4KYfyfV9yWE/edit?usp=sharing][Release Management]]
-***** Read: Chapters 1-2 of [[https://git-scm.com/book/en/v2][Git Book]]
-***** Read: Chapters 1-2 of [[http://svnbook.red-bean.com/][Subversion Book]]
+***** Read: Chapters 1-2 of [[https://git-scm.com/book/en/v2][Git Book]] to get a sense of how git workflow works, and the commands to add new files for tracking.
+***** Read: Chapters 1-2 of [[http://svnbook.red-bean.com/][Subversion Book]] to get a sense of how git workflow works, and the commands to add new files for tracking.
 ***** Post to discussion board
 
 ** Module 3 Importance of Specifications
@@ -322,10 +348,19 @@ Proposed schedule of completion is as follows, however students may read ahead.
 :CUSTOM_ID: m3
 :END:
 
-
 This module focuses on the different kinds of documents to see how technical information is structured and presented. We'll focus more on a type of document called a specification. Technical writing is an art, it helps to see different examples. From this week until the end you'll be referencing different kinds of documents to get good at picking out key details.
 
 Alongside this theme we'll also look at different programming paradigms to see how problems can be expressed in different kinds of abstractions.
+
+Proposed schedule of completion is as follows, however students may read ahead.
+
+- Before Monday: Topic 9
+- Before Tuesday: Topic 10
+- Before Wednesday: Topic 11
+- Before Thursday: Topic 12
+
+**Topics**
+#+TOC: headlines 1 local
 
 *** Topic 9: Technical Documents
 :PROPERTIES:
@@ -340,9 +375,9 @@ Alongside this theme we'll also look at different programming paradigms to see h
 ***** There is an art to technical writing
 
 **** Activities
-***** Lecture: [[https://docs.google.com/presentation/d/1LrmM5AS5T8H8iZv3Ls4Xz1QwCXooIrnFMmoRL7HC0xc/edit?usp=sharing][Specifications and other technical documents]]
-***** Read Pages 1-4 of The Algol 60 Report
-
+***** Lecture: [[https://docs.google.com/presentation/d/1LrmM5AS5T8H8iZv3Ls4Xz1QwCXooIrnFMmoRL7HC0xc/edit?usp=sharing][Specifications and other technical documents]] ([[https://www.youtube.com/watch?v=duYBHx4TiG8][video]])
+***** Skim/Read Pages 1-4 of [[https://doi.org/10.1145/367236.367262][The Algol 60 Report]] [[[../readings/file:///Users/kat/proj/teaching/cisc3140-su20.github.io/readings/Algol60_report_CACM_1960_June.pdf][pdf]]]  to get a sense of how the authors presented the features of the published programming language.
+***** Read through the comments for [[../readings/CommentingExample.pdf][these code files]] to get a sense of what it means to be thorough with documenting your code. It explains the problem that is being solved, and each function has a description explaining why it exists. This file was provided (and produced) by Lecturer Murray Gross. Notice how well you can understand the program even if you may not have fluency with the Haskell programming language.
 ***** Discussion Activity
 
 *** Topic 10: Programming paradigms
@@ -358,8 +393,8 @@ Alongside this theme we'll also look at different programming paradigms to see h
 
 **** Activities
 
-***** Lecture: [[https://docs.google.com/presentation/d/1g1U8DmKEZktFEwhe-4UTVIMzDR_i48c42m85Dg5fFlw/edit?usp=sharing][Programming Paradigms]], [[https://docs.google.com/presentation/d/1qHyboov4wXOtk1X2H8OJ4n6IAHlZMfAAhoaVKnuyUi8/edit?usp=sharing][Functional & Declarative Programming]]
-***** Read: [[https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf][Programming Paradigms for Dummies: What Every Programmer Should Know]]
+***** Lecture: [[https://docs.google.com/presentation/d/1g1U8DmKEZktFEwhe-4UTVIMzDR_i48c42m85Dg5fFlw/edit?usp=sharing][Programming Paradigms]], [[https://docs.google.com/presentation/d/1qHyboov4wXOtk1X2H8OJ4n6IAHlZMfAAhoaVKnuyUi8/edit?usp=sharing][Functional & Declarative Programming]] ([[https://www.youtube.com/watch?v=A0COa0YlDsk][video]])
+***** Read: The first and maybe second sections of [[https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf][Programming Paradigms for Dummies: What Every Programmer Should Know]] to know what the main paradigms are. The author provides [[https://www.info.ucl.ac.be/~pvr/paradigms.html][a summary of the article]] that's easier to read for main concepts and [[https://youtu.be/lqmMqtgWpms][this video]] summarizes the paper as well .
 ***** Post to discussion board
 
 *** Topic 11: Functional & declarative (Scheme)
@@ -372,13 +407,25 @@ Scheme is a programming language with many variations.
 **** Learning Objectives
 
 ***** Overview of the Scheme Programming Language
-***** Scheme views the world as lists (specifically linked lists)
-***** Scheme prefers using /recursion/ (i.e. map) instead of /iteration/ (i.e. for loop)
+***** Scheme is a high level language that comes from lisp tradition. It views the world as lists (specifically linked lists)
+***** Scheme prefers using /recursion/ (i.e. map) instead of /iteration/ (i.e. for loop) for handling lists.
+**** Scheme Examples
+#+BEGIN_SRC scheme
+; evaluate the addition of 1 and 2
+(+ 1 2)      ; 3
+
+; binding a name to a value
+(define x "Hello CISC 3140")
+(display x)  ; Hello CISC 3140
+#+END_SRC
 
 **** Activities
 
-***** Lecture: [[https://docs.google.com/presentation/d/1Qr8jGCUFSCWZYoZETAzlLx-0n9I3HktEWTxl74pIauQ/edit?usp=sharing][Starting in Scheme]]
-***** Read: [[https://www.cs.cmu.edu/~15110-f12/Touretzky-Common-Lisp-ch8.pdf][Chapter 8]]: Recursion from Common Lisp - to understand the concept of recursion and the advantages of doing so. There is a fun story about Martin and the Dragon.
+***** Lecture: [[https://docs.google.com/presentation/d/1Qr8jGCUFSCWZYoZETAzlLx-0n9I3HktEWTxl74pIauQ/edit?usp=sharing][Starting in Scheme]] ([[https://www.youtube.com/watch?v=8I6fSkxX1A0][video]])
+***** Read: [[https://www.cs.cmu.edu/~15110-f12/Touretzky-Common-Lisp-ch8.pdf][Chapter 8]]: Recursion from Common Lisp - to understand how recursion works and the advantages of using recursion. There is a fun story about Martin and the Dragon.
+***** Read through this to get a sense of the scheme language. /Learn Scheme in 15 minutes/ https://web-artanis.com/scheme.html
+***** Optional reading: /[[https://htdp.org/2020-5-6/Book/index.html][How to Design Programs]]/, 2nd edition.
+***** Optional reading: /Structure and Interpretation of Computer Programs/  [[[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html][html]] [[[../sicp.pdf][pdf]]]
 ***** Post to discussion board
 
 *** Topic 12: Scripting Language (JavaScript)
@@ -391,12 +438,15 @@ Scheme is a programming language with many variations.
 ***** Quirks of JavaScript
 
 **** Activities
-***** Lecture: Nuts & Bolts of JavaScript
+***** Lecture: [[https://docs.google.com/presentation/d/16zjMwQ5SoHHv1nH3lFVfYayJCffnro0oFkgVQNEgwQ8/edit?usp=sharing][Nuts & Bolts of JavaScript]]
 ***** Read at least one of the following to get a sense of the JavaScript language and quirks. Some possibilities include...
 ****** [[https://learnxinyminutes.com/docs/javascript/][Learn X in Y: JavaScript]]
 ****** [[http://bonsaiden.github.io/JavaScript-Garden/][Javascript Garden]]
 ****** [[http://jsforcats.com/][Javascript for Cats]]
 ****** [[http://spencertipping.com/js-in-ten-minutes/js-in-ten-minutes.pdf][Javascript in Ten Minutes]]
+***** Optional Reading to get a sense of JavaScript's history
+****** Peyrott, S. (2017). /A brief History of JavaScript/. Auth0 Blog. from https://auth0.com/blog/a-brief-history-of-javascript/
+****** Cassel, D. (2018). Brendan Eich on Creating JavaScript in 10 Days, and What He’d Do Differently Today. TheNewStack.  https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/
 ***** Post to the discussion board
 
 ** Module 4 Web Technology & Software Construction
@@ -405,12 +455,28 @@ Scheme is a programming language with many variations.
 :CUSTOM_ID: m4
 :END:
 
-*** Topic 13: Databases & Queries
+Proposed schedule of completion is as follows, however students may read ahead.
+
+- Before Monday: Topic 13
+- Start before Tuesday: Topic 14
+- Finish before Wednesday: Topic 14
+- Before Thursday: Topic 15
+
+**Topics**
+
+#+TOC: headlines 1 local
+
+*** Topic 13: Databases & Querying
 :PROPERTIES:
 :CUSTOM_ID: t13
 :END:
 
 **** Learning Objectives
+
+***** Learn how a relational table structure looks like
+***** Distinguish between rows and columns
+***** Understand the structure of a simple select statement
+***** Practice writing queries
 
 **** Activities
 
@@ -456,6 +522,9 @@ Scheme is a programming language with many variations.
 :CUSTOM_ID: m5
 :END:
 
+**Topics**
+#+TOC: headlines 1 local
+
 *** Topic 16: TBD
 :PROPERTIES:
 :CUSTOM_ID: t16
@@ -483,7 +552,7 @@ Scheme is a programming language with many variations.
 
 **** Activities:
 
-***** Lecture TBD
+***** Lecture [[https://docs.google.com/presentation/d/1mX-WwlFyxunNYP6PDGEfPK4diOT8HW5lkG-gjQAFXK4/edit?usp=sharing][Principles of Continuous Integration]]
 ***** Read Travis CI Documentation
 ****** [[https://travis-ci.org/getting_started][Getting Started Guide]]
 ****** [[https://docs.travis-ci.com/user/tutorial/][Travis CI TutorialTravis CI Tutorial]]
@@ -512,9 +581,17 @@ Scheme is a programming language with many variations.
 ** Summary
 :PROPERTIES:
 :UNNUMBERED: toc
+:CUSTOM_ID: tldr
 :END:
 
-To summarize the course in a short one-liner for each week:
+This quote explains very well the motivations for this course.
+
+#+BEGIN_QUOTE
+It’s about building software that works well and is easy to change and maintain, but more importantly, it’s about building software that provides real value to its users. We want to build software well, but we also need to build software that’s worth building. /---John Ferguson Smart from BBD In Action/
+#+END_QUOTE
+
+
+To summarize the course in a short one-liner for each module:
 
 - Module 1 :: Collaboration is challenging. Communication is hard.
 
@@ -522,9 +599,11 @@ To summarize the course in a short one-liner for each week:
 
 - Module 3 :: Technical documentation comes in all forms to cover all kinds of technical inventions... RTFM.
 
-- Module 4 :: Programming is to plumbing as software development is running a restaurant.
+- Module 4 :: Programming is to plumbing as software application development is to running a restaurant.
 
 - Module 5 :: Delivery is about juggling the end-user needs with software quality.
+
+
 
 * Bibliography
 :PROPERTIES:
@@ -532,36 +611,78 @@ To summarize the course in a short one-liner for each week:
 :CUSTOM_ID: bibliography
 :END:
 
-This section will contain links to papers and books referenced.
+This section contains links to papers and books referenced.
 
 ** Module 1
-- Dingsøyr, T., Moe, N.B., Fægri, T.E. et al. /Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation/. Empir Software Eng 23, 490–520 (2018). https://doi.org/10.1007/s10664-017-9524-2
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: bm1
+:END:
+
+- Dingsøyr, T., Moe, N.B., Fægri, T.E. et al. /Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation/. Empir Software Eng 23, 490–520 (2018). DOI:https://doi.org/10.1007/s10664-017-9524-2
 - Mindset Network (2014). Difference between Application and System Software [instructional video] from https://www.youtube.com/watch?v=JxkEkWpo6Vw
-- Leveson, N. and Turner, C.S., /An investigation of the Therac-25 accidents/, in Computer, vol. 26, no. 7, pp. 18-41, July 1993, doi: 10.1109/MC.1993.274940.
+- Leveson, N. and Turner, C.S., /An investigation of the Therac-25 accidents/, in Computer, vol. 26, no. 7, pp. 18-41, July 1993, DOI:https://doi.org/10.1109/MC.1993.274940.
 - Conway, M.E. (1968) /How Do Committees Invent?/ F. D. Thompson Publications, Inc. from https://www.melconway.com/Home/Committees_Paper.html
 ** Module 2
-- Wirth, N. (2008). /A Brief History of Software Engineering,/ in IEEE Annals of the History of Computing, vol. 30, no. 3, pp. 32-39. from https://ieeexplore.ieee.org/document/4617912/
-- Faella, M. (2020). Chapter 1 of /[[https://www.manning.com/books/seriously-good-software][Seriously Good Software]]/. Manning Publications. from https://livebook.manning.com/book/seriously-good-software/
-- Gallegos, F. (1985). /Software Tools and Techniques Report/ from EDP Auditing. Auerbach Publishers Inc. Archived by US Government Accountability Office. from https://www.gao.gov/products/128750
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: bm2
+:END:
+
+- Wirth, N. (2008). /A Brief History of Software Engineering,/ in IEEE Annals of the History of Computing 30, 3, pp. 32-39. from DOI:https://doi.org/10.1109/MAHC.2008.33 [[[file:../readings/A Brief History of Software Engineering.pdf][pdf]]]
+  - Briefer version here https://www.vikingcodeschool.com/software-engineering-basics/a-brief-history-of-software-engineering
+
+- Brooks, F. (1987). No Silver Bullet Essence and Accidents of Software Engineering. Computer 20, 4, pp. 10–19. DOI:https://doi.org/10.1109/MC.1987.1663532
+- Faella, M. (2020). /[[https://www.manning.com/books/seriously-good-software][Seriously Good Software]]/. Manning Publications. ISBN: 9781617296291 from https://livebook.manning.com/book/seriously-good-software/
+  - [[https://livebook.manning.com/book/seriously-good-software/about-this-book/][Chapter 1 Software qualities and a problem to solve]]
+- Gallegos, F. (1985). /Software Tools and Techniques Report/ from EDP Auditing. Auerbach Publishers Inc. Archived by US Government Accountability Office https://www.gao.gov/products/128750
 - Royce, W. (2005). /Successful Software Management Style: Steering and Balance/. IEEE Softw. 22, 5 (September 2005), 40–47. DOI:https://doi.org/10.1109/MS.2005.138
 - Nickoloff, J. (2016). Chapter 1 of /[[https://www.manning.com/books/docker-in-action][Docker in Action]]./ Manning Publications. ISBN: 9781633430235 from https://livebook.manning.com/book/docker-in-action/
 - Chacon, S. Straub, B. (2014). /Pro Git/ 2nd edition. Apress. Online version from https://git-scm.com/book/en/v2
 - Collins-Sussman, B., Fitzpatrick, B.W., and Pilato, C.M. (2013). /Version Control with Subversion/  O'Reilly Media. Online version from http://svnbook.red-bean.com/
+- Mecklenburg, R. (2004). /Managing Projects with GNU Make/, 3rd edition, O'Reilly. [[[file:../readings/Managing_Projects_with_GNU_Make_Third_Edition.pdf][pdf]]]
 ** Module 3
-- The Algol 60 Report
-- Programming Paradigms for Dummies: What Every Programmer Should Know
-- Chapter 8: Recursion from Common Lisp
-- JS Books
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: bm3
+:END:
+
+- Backus, J.W. (1960). /Report on the algorithmic language ALGOL 60/. Communications of the ACM, 3, 8 May 1980, pp. 299-314. DOI:https://doi.org/10.1145/367236.367262
+- Van Roy, P. (2009). /[[https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf][Programming Paradigms for Dummies: What Every Programmer Should Know]]/
+- Touretzky, D.S. (1990). /COMMON LISP: A Gentle Introduction to Symbolic Computation/. The Benjamin/Cummings Publishing Company, Inc. ISBN:  0-8053-0492-4  [[[file:../readings/TouretzskyCommonLisp..pdf][pdf]]]
+  - [[file:../readings/Touretzky-Common-Lisp-ch8.pdf][Chapter 8: Recursion]] [[[file:../readings/Touretzky-Common-Lisp-ch8.pdf][pdf]]]
+- Felleisen, M. Findler, R.B., Flatt, M. Krishnamurthi, S. (2014). /How to Design Programs/, 2nd edition. The MIT Press. https://htdp.org
+- Abelson, H., Sussman, G. J., and Sussman, J. (1996). /Structure and Interpretation of Computer Programs/, 2nd edition. The MIT Press. ISBN: 9780262510875 [[[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html][html]] [[[../sicp.pdf][pdf]]]
+- JavaScript
+  - [[https://learnxinyminutes.com/docs/javascript/][Learn X in Y: JavaScript]]
+  - [[http://bonsaiden.github.io/JavaScript-Garden/][Javascript Garden]]
+  - [[http://jsforcats.com/][Javascript for Cats]]
+  - [[http://spencertipping.com/js-in-ten-minutes/js-in-ten-minutes.pdf][Javascript in Ten Minutes]]
+
 ** Module 4
-- Chapter 1 of HTTP/2 in Action https://livebook.manning.com/book/http2-in-action/chapter-1/
-- Chapter 1 of API Design Patterns https://livebook.manning.com/book/api-design-patterns/chapter-1/v-5/
-- Hunter, K. L. (2017). /Irresistible APIs/. Manning Publications. ISBN: 9781617292552 from https://livebook.manning.com/book/irresistible-apis/
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: bm4
+:END:
+
+- Pollard, B. (2019). /HTTP/2 in Action/, Manning Publications. ISBN: 9781617295164
+  - [[https://livebook.manning.com/book/http2-in-action/chapter-1/][Chapter 1 Web Technologies and HTTP]]
+- Geewax, JJ. (early release). /[[https://www.manning.com/books/api-design-patterns][API Design Patterns]]/, Manning Publications. ISBN: 9781617295850
+  - [[https://livebook.manning.com/book/api-design-patterns/chapter-1/v-5/][Chapter 1 Introduction to APIs]]
+- Hunter, K. L. (2016). /[[https://www.manning.com/books/irresistible-apis][Irresistible APIs]]/. Manning Publications. ISBN: 9781617292552 from https://livebook.manning.com/book/irresistible-apis/
 - HTML Living Standard https://html.spec.whatwg.org/
-- Design for the Mind https://livebook.manning.com/book/design-for-the-mind/about-this-book/
-- CSS in Depth https://livebook.manning.com/book/css-in-depth
+- Yocco, V.S. (2016). /[[https://www.manning.com/books/design-for-the-mind/][Design for the Mind]]/. Manning Publications. ISBN: 9781617292958 from https://livebook.manning.com/book/design-for-the-mind/about-this-book/
+- Grant, K.J. (2018). /[[https://www.manning.com/books/css-in-depth/][CSS in Depth]]/
+  - [[https://livebook.manning.com/book/css-in-depth/chapter-1][Chapter 1 Cascade, Specificity, & Inheritance]]
+
 ** Module 5
+:PROPERTIES:
+:UNNUMBERED: TOC
+:CUSTOM_ID: bm5
+:END:
+
 - Son, B. (2019). A beginner's guide to building DevOps pipelines with open source tools. Opensource.com From https://opensource.com/article/19/4/devops-pipeline
 - Atlassian CI/CD Guides https://www.atlassian.com/continuous-delivery/
 - Smart, J.F. (2014). /[[https://www.manning.com/books/bdd-in-action][BDD In Action]]./ 2nd Edition. Manning Publications. ISBN: 9781617291654. From https://livebook.manning.com/book/bdd-in-action-second-edition/
   - [[https://livebook.manning.com/book/bdd-in-action-second-edition/chapter-1/v-4/][Chapter 1]] Building Software that Makes a Difference, specifically *section 1.1 /BDD from 50,000 feet/*
-  - [[https://livebook.manning.com/book/bdd-in-action/chapter-4/13][Chapter 4]] Describing and Prioritizing Features
+  - [[https://livebook.manning.com/book/bdd-in-action/chapter-4/13][Chapter 4 Describing and Prioritizing Features]]
