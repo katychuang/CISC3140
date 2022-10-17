@@ -13,10 +13,10 @@
 
 # awk
 
-* Print column 1
+* Print column 1 \
   `awk '{print $1}' <(head -n 20 sample.csv)`  defaults to Field Separator of whitespace
 
-  with setting delimiter to , not  
+  with setting delimiter to \  
   `awk -F , '{print $1}' <(head -n 20 sample.csv)`  change delimiter (or field separator) to ,
   the `<( command )` structure directs the input stream similar to piping the output, i.e.  `head -n 20 sample.csv | awk -F , '{print $1}'`
 * Print column 1 and 3 where year (col1) is between 1935 and 1940
@@ -29,7 +29,7 @@
   `awk -f prog1.awk film.csv`
   because you have the shebang line in that file with -f flag, you can set it to executable `chmod +x prog1.awk` and run as an executable script, `./prog1.awk film.csv`
 
-* Run a program file that contains functions (see prog3.awk)
+* An awk program file that contains functions (see prog3.awk)
 
 # Data
 
